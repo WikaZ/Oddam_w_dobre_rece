@@ -3,7 +3,7 @@ import HomeHeader from './homeHeader';
 import HomeThreeCol from './homeThreeCol'
 import HomeIconPath from './homeIconPath'
 import HomeAboutUs from './homeAboutUs'
-import HomeWhoWeHelp from './homeWhoWeHelp'
+import HomeWhoDoWeHelp from './homeWhoDoWeHelp'
 import HomeContactUs from './homeContactUs'
 import HomeFooter from './homeFooter'
 
@@ -21,7 +21,7 @@ class Home extends React.Component {
                 < HomeThreeCol/>
                 < HomeIconPath/>
                 < HomeAboutUs/>
-                < HomeWhoWeHelp/>
+                < HomeWhoDoWeHelp/>
                 < HomeContactUs/>
                 < HomeFooter/>
             </>

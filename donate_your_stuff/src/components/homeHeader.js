@@ -81,7 +81,7 @@ class HomeHeader extends React.Component {
                                               smooth={true}
                                               offset={0}
                                               duration={500}
-                                              to={'homeWhoWeHelp'}>Fundacja i organizacje</Link>
+                                              to={'homeWhoDoWeHelp'}>Fundacja i organizacje</Link>
                                     </li>
                                     <li>
                                         <Link activeClass="activeLink"
