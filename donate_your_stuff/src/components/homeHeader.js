@@ -36,19 +36,16 @@ class HomeHeader extends React.Component {
             <div className={"header"}>
                 <Container fluid className={"containerStyle"}>
                     <Row>
-                        <Col lg={{offset: 9, span: 3}}>
-                            <HashRouter>
-                                <>
-                                    <MainUpperMenuBar/>
-                                    {/*<Switch>*/}
-                                    {/*    <Route path="/logowanie" component={LogIn}/>*/}
-                                    {/*    <Route path="/konto" component={SignUp}/>*/}
-                                    {/*</Switch>*/}
-                                </>
-                            </HashRouter>
+                        <Col>
+                            <div className={"MainUpperMenuBar"}>
+                                <MainUpperMenuBar/>
+                            </div>
 
-
-                            <div>
+                        </Col>
+                    </Row>
+                    <Row>
+                        <Col>
+                            <div className={"mainMenu"}>
 
                                 <ul className={"headerMenu"}>
                                     <li><Link activeClass="activeLink"
@@ -100,14 +97,14 @@ class HomeHeader extends React.Component {
                     </Row>
                     <Row>
                         <Col lg={{offset: 6, span: 6}} className={"mainHeaderText"}>
-                            <h1>Zacznij pomagac!</h1>
+                            <h1>Zacznij pomagać!</h1>
                             <h1>Oddaj niechciane rzeczy w zaufane ręce</h1>
                             <img src={img} alt="decoration"/>
 
                         </Col>
                     </Row>
                     <Row>
-                        <Col lg={{offset: 6, span: 6}} >
+                        <Col lg={{offset: 6, span: 6}}>
                             <CallToAction/>
 
                         </Col>

@@ -19,7 +19,7 @@ class CallToAction extends React.Component {
                 <>
                     <ul className={"btnList"}>
                         <li><Link to="/logowanie" className={"callToAction"}><p>ODDAJ </p><p>RZECZY</p></Link></li>
-                        <li><Link to="/logowanie" className={"callToAction"}><p>ZORGANIZUj</p>
+                        <li><Link to="/logowanie" className={"callToAction"}><p>ZORGANIZUJ</p>
                             <p>ZBIÓRKĘ</p></Link></li>
                     </ul>
                 </>

@@ -20,7 +20,7 @@ class MainUpperMenuBar extends React.Component {
         return (
             <div>
 
-                <ul className={"headerMenu"}>
+                <ul>
                     <li><Link to="/logowanie">Zaloguj</Link></li>
                     <li><Link to="/rejestracja">Załóż konto</Link></li>
 

@@ -2,6 +2,10 @@
 @import "./settings/_colors.scss";
 @import "./settings/_fonts.scss";
 
+@mixin containerHome {
+  margin: 0 143px;
+  float: right;
+}
 
 body {
   font-family: $font-base;
@@ -23,14 +27,79 @@ p {
   background-repeat: no-repeat;
 }
 
-.headerMenu {
+
+//style for mainUpperMenu
+
+.MainUpperMenuBar {
+  @include containerHome;
+  //margin: 0 143px;
+  //float: right;
+
   li {
     display: inline-block;
-    padding-right: 20px;
-    font-size: 16px;
-    margin-top: 50px;
+    margin-top: 37px;
+    padding: 13px 10px 13px 10px;
+    font-size: 13px;
+    font-weight: 400;
     text-decoration: none;
     cursor: pointer;
+
+    &:first-child {
+      margin-right: 19px;
+    }
+
+    a {
+      text-decoration: none;
+      color: $color_main_font;
+    }
+  }
+
+  li:hover {
+    border: 1px solid $color_bgr_three_col;
+    padding: 13px 10px 13px 10px;
+
+    &:first-child {
+      margin-right: 19px;
+    }
+
+    a {
+
+    }
+  }
+}
+
+
+//style for mainMenu
+
+.mainMenu {
+  @include containerHome;
+
+
+}
+
+.headerMenu {
+
+  margin-top: 16px;
+
+  li {
+    font-size: 18px;
+    font-family: $font-base;
+    font-weight: 400;
+    display: inline-block;
+    margin-right: 20px;
+    padding: 12px 20px 12px 20px;
+    &:last-child {
+      margin-right: 0;
+    }
+
+    text-decoration: none;
+    cursor: pointer;
+
+    &:hover {
+      border: 1px solid #6c6c6c;
+      padding: 12px 20px 12px 20px;
+    }
+
 
     a {
       text-decoration: none;
@@ -60,6 +129,7 @@ p {
 
 .btnList {
   margin-bottom: 100px;
+
   li {
     display: inline-block;
     border: 1px solid $color_main_font;
