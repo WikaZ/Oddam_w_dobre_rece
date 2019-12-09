@@ -2,12 +2,49 @@
 @import "./settings/_colors.scss";
 @import "./settings/_fonts.scss";
 
+
 body{
   font-family: $font-base;
-  background-color: greenyellow;
+  background-color: white;
 }
 
 p{
   color:deeppink;
   font-family: $font-alt;
+}
+.header{
+
+  background-image: url("../assets/Home-Hero-Image.jpg");
+  background-position:-480px;
+  background-repeat: no-repeat;
+}
+.headerMenu{
+  li{
+    display: inline-block;
+    //margin-top: -480px;
+    a{
+      text-decoration: none;
+    }
+
+  }
+}
+
+.containerStyle{
+  margin:0;
+
+}
+.headerBtn{
+  border: 1px solid #bcbcbc;
+  background-color: white;
+  padding: 25px;
+
+}
+
+.callToAction{
+  margin-top: 100px;
+  margin-bottom: 300px;
+}
+
+.mainHeaderText{
+  margin-top: 350px;
 }
