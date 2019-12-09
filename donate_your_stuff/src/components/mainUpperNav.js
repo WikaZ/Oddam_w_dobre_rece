@@ -19,15 +19,16 @@ class MainUpperMenuBar extends React.Component {
     render() {
         return (
             <div>
-                <Router>
+
                     <ul className={"headerMenu"}>
                         <li><Link to="/logowanie">Zaloguj</Link></li>
-                        <li><Link to="/konto">Załóż konto</Link></li>
+                        <li><Link to="/rejestracja">Załóż konto</Link></li>
 
                     </ul>
-                    <Route exact path="/logowanie" component={LogIn}/>
-                    <Route path="/konto" component={SignUp}/>
-                </Router>
+
+
+
+
             </div>
         )
     }

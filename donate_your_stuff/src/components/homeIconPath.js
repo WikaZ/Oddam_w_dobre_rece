@@ -10,7 +10,10 @@ class HomeIconPath extends React.Component{
 
     render() {
         return(
-            <p>Hi, Im HomeIconPath</p>
+            <div id={"homeIconPath"} style={{height:"350px", backgroundColor:"green"}}>
+                <p>Hi, Im HomeIconPath</p>
+            </div>
+
         )
     }
 }

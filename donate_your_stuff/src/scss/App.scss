@@ -3,48 +3,117 @@
 @import "./settings/_fonts.scss";
 
 
-body{
+body {
   font-family: $font-base;
   background-color: white;
+  color: $color_main_font;
 }
 
-p{
-  color:deeppink;
+p {
+  color: white;
+  font: 35px bold;
   font-family: $font-alt;
+  text-align: center;
 }
-.header{
+
+.header {
 
   background-image: url("../assets/Home-Hero-Image.jpg");
-  background-position:-480px;
+  background-position: -480px;
   background-repeat: no-repeat;
 }
-.headerMenu{
-  li{
+
+.headerMenu {
+  li {
     display: inline-block;
-    //margin-top: -480px;
-    a{
+    padding-right: 20px;
+    font-size: 16px;
+    margin-top: 50px;
+    text-decoration: none;
+    cursor: pointer;
+
+    a {
       text-decoration: none;
+      color: $color_main_font;
     }
+
+    //color:#828282;
 
   }
 }
 
-.containerStyle{
-  margin:0;
+//style for active links in mainMenuBar
+.headerMenu > .activeLink {
+  color: deeppink;
+  cursor: pointer;
+}
+
+.callToAction {
+
+  p {
+    color: $color_main_font;
+    font-size: 35px;
+  }
+
 
 }
-.headerBtn{
+
+.btnList {
+  margin-bottom: 100px;
+  li {
+    display: inline-block;
+    border: 1px solid $color_main_font;
+    padding: 25px;
+    text-align: center;
+
+    a {
+      text-decoration: none;
+    }
+
+    &:first-child {
+      margin-right: 35px;
+    }
+  }
+}
+
+//#homeAboutUs:active{
+//  color: deeppink;
+//  cursor: pointer;
+//}
+//
+//#homeContactUs:active{
+//  color: deeppink;
+//  cursor: pointer;
+//}
+//
+//#homeFooter:active{
+//  color: deeppink;
+//  cursor: pointer;
+//}
+//
+//#homeThreeCol:active{
+//  color: deeppink;
+//  cursor: pointer;
+//}
+//
+//#homeWhoWeHelp:active{
+//  color: deeppink;
+//  cursor: pointer;
+//}
+
+.containerStyle {
+  margin: 0;
+
+}
+
+.headerBtn {
   border: 1px solid #bcbcbc;
   background-color: white;
   padding: 25px;
 
 }
 
-.callToAction{
-  margin-top: 100px;
-  margin-bottom: 300px;
-}
 
-.mainHeaderText{
+.mainHeaderText {
   margin-top: 350px;
 }

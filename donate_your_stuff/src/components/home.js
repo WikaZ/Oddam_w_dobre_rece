@@ -17,6 +17,7 @@ class Home extends React.Component {
         return (
             <>
                 <HomeHeader/>
+
                 < HomeThreeCol/>
                 < HomeIconPath/>
                 < HomeAboutUs/>

@@ -9,9 +9,16 @@ import {
     BrowserRouter as Router,
     Switch,
     Route,
-    Link
+    // Link
 } from "react-router-dom";
 import MainUpperMenuBar from "./mainUpperNav";
+import LogIn from "./logIn";
+import SignUp from "./signUp";
+import CallToAction from "./callToAction"
+
+
+import {Link} from "react-scroll";
+import {animateScroll as scroll} from "react-scroll";
 
 
 class HomeHeader extends React.Component {
@@ -20,48 +27,98 @@ class HomeHeader extends React.Component {
         this.state = {}
     }
 
+    handleSetActive = (to) => {
+        console.log(to);
+    }
+
     render() {
         return (
             <div className={"header"}>
                 <Container fluid className={"containerStyle"}>
                     <Row>
                         <Col lg={{offset: 9, span: 3}}>
-                            <MainUpperMenuBar/>
-
-                        <div>
-                            <ul className={"headerMenu"}>
-                                <li><a href={"#"}>Start</a></li>
-                                <li><a href={"#"}>O co chodzi</a></li>
-                                <li><a href={"#"}>O nas</a></li>
-                                <li><a href={"#"}>Fundacja i organizacje</a></li>
-                                <li><a href={"#"}>Kontakt</a></li>
-                            </ul>
-                        </div>
-                    </Col>
+                            <HashRouter>
+                                <>
+                                    <MainUpperMenuBar/>
+                                    <Switch>
+                                        <Route path="/logowanie" component={LogIn}/>
+                                        <Route path="/konto" component={SignUp}/>
+                                    </Switch>
+                                </>
+                            </HashRouter>
 
 
-                </Row>
-                <Row>
-                    <Col lg={{offset: 6, span: 6}} className={"mainHeaderText"}>
-                        <h1>Zacznij pomagac!</h1>
-                        <h1>Oddaj niechciane rzeczy w zaufane ręce</h1>
-                        <img src={img} alt="decoration"/>
+                            <div>
 
-                    </Col>
-                </Row>
-                <Row>
-                    <Col lg={{offset: 6, span: 6}} className={"callToAction"}>
-                        <button className={"headerBtn"}>ODDAJ RZECZY</button>
-                        <button className={"headerBtn"}>ZORGANIZUJ ZBIÓRKĘ</button>
-                    </Col>
-                </Row>
-                <Row>
+                                <ul className={"headerMenu"}>
+                                    <li><Link activeClass="activeLink"
+                                              spy={true}
+                                              smooth={true}
+                                              offset={0}
+                                              duration={500}
+                                              to={"header"}>Start</Link>
+                                    </li>
+                                    <li>
 
-                </Row>
+                                        <Link activeClass="activeLink"
+                                              spy={true}
+                                              smooth={true}
+                                              offset={0}
+                                              duration={500}
+                                              to={'homeThreeCol'}>O co chodzi</Link>
+                                    </li>
+                                    <li>
+                                        <Link activeClass="activeLink"
+                                              spy={true}
+                                              smooth={true}
+                                              offset={0}
+                                              duration={500}
+                                              to={'homeAboutUs'}>O nas</Link>
+                                    </li>
+                                    <li>
+                                        <Link activeClass="activeLink"
+                                              spy={true}
+                                              smooth={true}
+                                              offset={0}
+                                              duration={500}
+                                              to={'homeWhoWeHelp'}>Fundacja i organizacje</Link>
+                                    </li>
+                                    <li>
+                                        <Link activeClass="activeLink"
+                                              spy={true}
+                                              smooth={true}
+                                              offset={0}
+                                              duration={500}
+                                              to={'homeContactUs'}>Kontakt</Link>
+                                    </li>
+                                </ul>
 
-            </Container>
-    </div>
-    )
+                            </div>
+                        </Col>
+
+
+                    </Row>
+                    <Row>
+                        <Col lg={{offset: 6, span: 6}} className={"mainHeaderText"}>
+                            <h1>Zacznij pomagac!</h1>
+                            <h1>Oddaj niechciane rzeczy w zaufane ręce</h1>
+                            <img src={img} alt="decoration"/>
+
+                        </Col>
+                    </Row>
+                    <Row>
+                        <Col lg={{offset: 6, span: 6}} >
+                            <CallToAction/>
+
+                        </Col>
+                    </Row>
+                    <Row>
+
+                    </Row>
+
+                </Container>
+            </div>
+        )
     }
 }
 

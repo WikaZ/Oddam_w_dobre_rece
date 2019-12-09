@@ -10,7 +10,10 @@ class HomeContactUs extends React.Component{
 
     render() {
         return(
-            <p>Hi, Im HomeContactUs</p>
+            <div  id={"homeContactUs"} style={{height:"350px", backgroundColor:"gold"}}>
+                <p>Hi, Im HomeContactUs</p>
+            </div>
+
         )
     }
 }

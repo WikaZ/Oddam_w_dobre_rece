@@ -10,7 +10,10 @@ class HomeFooter extends React.Component{
 
     render() {
         return(
-            <p>Hi, Im homefooter</p>
+            <div id={"homeFooter"} style={{height:"350px", backgroundColor:"navy"}}>
+                <p>Hi, Im homefooter</p>
+            </div>
+
         )
     }
 }

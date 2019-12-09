@@ -10,7 +10,10 @@ class HomeWhoWeHelp extends React.Component{
 
     render() {
         return(
-            <p>Hi, Im HomeWhoWeHelp</p>
+            <div id={"homeWhoWeHelp"} style={{height:"350px", backgroundColor:"orange"}}>
+                <p>Hi, Im HomeWhoWeHelp</p>
+            </div>
+
         )
     }
 }
