@@ -9,7 +9,7 @@ import {
     BrowserRouter as Router,
     Switch,
     Route,
-    // Link
+    Link as RouterLink
 } from "react-router-dom";
 import MainUpperMenuBar from "./mainUpperNav";
 import LogIn from "./logIn";
@@ -40,10 +40,10 @@ class HomeHeader extends React.Component {
                             <HashRouter>
                                 <>
                                     <MainUpperMenuBar/>
-                                    <Switch>
-                                        <Route path="/logowanie" component={LogIn}/>
-                                        <Route path="/konto" component={SignUp}/>
-                                    </Switch>
+                                    {/*<Switch>*/}
+                                    {/*    <Route path="/logowanie" component={LogIn}/>*/}
+                                    {/*    <Route path="/konto" component={SignUp}/>*/}
+                                    {/*</Switch>*/}
                                 </>
                             </HashRouter>
 

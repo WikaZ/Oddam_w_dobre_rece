@@ -8,6 +8,8 @@ import {
     Route,
     Link
 } from "react-router-dom";
+import LogIn from "./logIn";
+import SignUp from "./signUp";
 
 class App extends React.Component{
     constructor(props) {
@@ -20,13 +22,11 @@ class App extends React.Component{
     render() {
         return(
             <HashRouter>
-
-
-
-                        <Route exact path={"/"} component={Home}/>
-
-
-
+                <Switch>
+                    <Route path="/logowanie" component={LogIn}/>
+                    <Route path="/rejestracja" component={SignUp}/>
+                    <Route exact path={"/"} component={Home}/>
+                </Switch>
             </HashRouter>
         )
     }
