@@ -3,7 +3,15 @@ import Button from "react-bootstrap/Button";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Container from "react-bootstrap/Container";
-import img from "../assets/Decoration.svg"
+import img from "../assets/Decoration.svg";
+import {HashRouter} from "react-router-dom";
+import {
+    BrowserRouter as Router,
+    Switch,
+    Route,
+    Link
+} from "react-router-dom";
+import MainUpperMenuBar from "./mainUpperNav";
 
 
 class HomeHeader extends React.Component {
@@ -18,14 +26,8 @@ class HomeHeader extends React.Component {
                 <Container fluid className={"containerStyle"}>
                     <Row>
                         <Col lg={{offset: 9, span: 3}}>
-                        <div>
+                            <MainUpperMenuBar/>
 
-                                <ul className={"headerMenu"}>
-                                    <li><a href={"#"}>Zaloguj</a></li>
-                                    <li><a href={"#"}>Załóż konto</a></li>
-
-                                </ul>
-                        </div>
                         <div>
                             <ul className={"headerMenu"}>
                                 <li><a href={"#"}>Start</a></li>
