@@ -8,4 +8,58 @@
 
 .homeIconPathHeader{
   text-align: center;
+  padding-top:77px;
+  .iconPathHeaderText{
+    padding-bottom:23px;
+    font-size: 38px;
+    font-family: $font-base;
+
+  }
+  img{
+    padding-bottom:35px;
+  }
+}
+
+.btnCallToAction{
+  padding-bottom: 67px;
+  padding-top:34px;
+  a{
+    text-decoration: none;
+    h1{
+      padding:15px 96px;
+      border: 1px solid #3C3C3C;
+      &:hover {
+        background-color: black;
+        color: #3c3c3c;
+      }
+    }
+
+  }
+}
+.stepMainContent{
+background-color: $color_bgr_icons_path;
+}
+.step{
+  padding-top: 72px;
+  padding-bottom:64px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  span{
+    font-size:18px;
+    padding-bottom: 23px;
+    padding-top: 18px;
+  }
+  p{
+    color: #959695;
+    font-size:16px;
+    padding-top: 17px;
+  }
+
+
+}
+
+div.col{
+  padding: 0;
 }

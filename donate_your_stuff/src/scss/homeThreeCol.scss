@@ -42,10 +42,13 @@
 }
 
 .threeColNum {
-  font-size: 90px;
-  color: #5e5322;
-  font-family: $font-alt;
-  font-weight: 300;
-  text-align: center;
-  margin-top: 76px;
+  p {
+    font-size: 90px;
+    color: #5e5322;
+    font-family: $font-alt;
+    font-weight: 300;
+    text-align: center;
+    margin-top: 76px;
+  }
+
 }

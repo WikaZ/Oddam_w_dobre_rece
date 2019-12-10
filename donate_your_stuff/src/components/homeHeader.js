@@ -27,9 +27,7 @@ class HomeHeader extends React.Component {
         this.state = {}
     }
 
-    handleSetActive = (to) => {
-        console.log(to);
-    }
+
 
     render() {
         return (

@@ -7,7 +7,12 @@ body {
   font-family: $font-base;
   background-color: white;
   color: $color_main_font;
-}
+  .container{
+
+    padding:0;
+    }
+  }
+
 
 p {
   color: white;
@@ -161,9 +166,7 @@ p {
     font-weight: 400;
     text-align: center;
 
-    &:first-child {
-      margin-bottom: 16px;
-    }
+
   }
 }
 
@@ -176,29 +179,7 @@ p {
   margin-top: 64px;
   margin-bottom: 261px;
 
-  .callToAction {
 
-    span, h1 {
-      color: $color_main_font;
-      font-size: 36px;
-      line-height: 45px;
-      margin-bottom: 0;
-      font-family: $font-alt;
-      font-weight: 100;
-      text-align: center;
-
-      &:first-child {
-        //padding-bottom: 10px;
-        //margin:0;
-      }
-    }
-
-    span {
-      display: block;
-    }
-
-
-  }
 
   .btnList {
 
@@ -229,4 +210,27 @@ p {
       }
     }
   }
+}
+.callToAction {
+
+  span, h1 {
+    color: $color_main_font;
+    font-size: 36px;
+    line-height: 45px;
+    margin-bottom: 0;
+    font-family: $font-alt;
+    font-weight: 100;
+    text-align: center;
+
+    &:first-child {
+      //padding-bottom: 10px;
+      //margin:0;
+    }
+  }
+
+  span {
+    display: block;
+  }
+
+
 }
