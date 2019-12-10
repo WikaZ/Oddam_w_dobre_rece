@@ -1,0 +1,228 @@
+@mixin containerHome {
+  margin: 0 140px;
+  float: right;
+}
+
+body {
+  font-family: $font-base;
+  background-color: white;
+  color: $color_main_font;
+}
+
+p {
+  color: white;
+  font: 35px bold;
+  font-family: $font-alt;
+  text-align: center;
+}
+
+.header {
+
+  background-image: url("../assets/Home-Hero-Image.jpg");
+  background-position-x: -480px;
+  background-repeat: no-repeat;
+}
+
+
+//style for mainUpperMenu
+
+.MainUpperMenuBar {
+  @include containerHome;
+  //margin: 0 143px;
+  //float: right;
+
+  li {
+    display: inline-block;
+    margin-top: 34px;
+    margin-bottom: 16px;
+    padding: 13px 10px 13px 10px;
+    font-size: 13px;
+    font-weight: 400;
+    text-decoration: none;
+    cursor: pointer;
+    border: 1px solid transparent;
+
+    &:first-child {
+      margin-right: 19px;
+    }
+
+    &:last-child {
+      margin-right: 11px;
+    }
+
+    a {
+      text-decoration: none;
+      color: $color_main_font;
+    }
+  }
+
+  li:hover {
+    border: 1px solid $color_bgr_three_col;
+    padding: 13px 10px 13px 10px;
+
+    &:first-child {
+      margin-right: 19px;
+    }
+
+    a {
+
+    }
+  }
+}
+
+
+//style for mainMenu
+
+.mainMenu {
+  @include containerHome;
+
+
+}
+
+.headerMenu {
+
+  //margin-top: 16px;
+
+  li {
+    font-size: 18px;
+    font-family: $font-base;
+    font-weight: 400;
+    display: inline-block;
+    margin-right: 20px;
+    padding: 12px 20px 12px 20px;
+    border: 1px solid transparent;
+    &:last-child {
+      margin-right: 0;
+    }
+
+    text-decoration: none;
+    cursor: pointer;
+
+    &:hover {
+      border: 1px solid #6c6c6c;
+      padding: 12px 20px 12px 20px;
+    }
+
+
+    a {
+      text-decoration: none;
+      color: $color_main_font;
+    }
+
+    //color:#828282;
+
+  }
+}
+
+//style for active links in mainMenuBar
+.headerMenu > .activeLink {
+  color: deeppink;
+  cursor: pointer;
+}
+
+
+.containerStyle {
+  margin: 0;
+
+}
+
+.headerBtn {
+  border: 1px solid #bcbcbc;
+  background-color: white;
+  padding: 25px;
+
+}
+
+
+.mainHeaderText {
+  margin-top: 224px;
+  padding: 0;
+
+  .mainHeading {
+    margin-right: 222px;
+    float: right;
+
+    .mainHeadingContent {
+      text-align: center;
+    }
+  }
+
+  h1 {
+    font-size: 38px;
+    letter-spacing: -1px;
+
+    //line-height: 55px;
+    color: #3c3c3c;
+    font-family: $font-base;
+    font-weight: 400;
+    text-align: center;
+
+    &:first-child {
+      margin-bottom: 16px;
+    }
+  }
+}
+
+.homeDecoration {
+  margin-top: 34px;
+}
+
+//call to action btn
+.homeCallToAction {
+  margin-top: 64px;
+  margin-bottom: 261px;
+
+  .callToAction {
+
+    span, h1 {
+      color: $color_main_font;
+      font-size: 36px;
+      line-height: 45px;
+      margin-bottom: 0;
+      font-family: $font-alt;
+      font-weight: 100;
+      text-align: center;
+
+      &:first-child {
+        //padding-bottom: 10px;
+        //margin:0;
+      }
+    }
+
+    span {
+      display: block;
+    }
+
+
+  }
+
+  .btnList {
+
+    li {
+      &:hover {
+        background-color: black;
+        color: #3c3c3c;
+      }
+
+      display: inline-block;
+      border: 1px solid $color_main_font;
+
+      &:first-child {
+        padding: 15px 96px;
+      }
+
+      &:last-child {
+        padding: 15px 49px;
+      }
+
+
+      a {
+        text-decoration: none;
+      }
+
+      &:first-child {
+        margin-right: 35px;
+      }
+    }
+  }
+}

@@ -96,22 +96,30 @@ class HomeHeader extends React.Component {
 
                     </Row>
                     <Row>
-                        <Col lg={{offset: 6, span: 6}} className={"mainHeaderText"}>
-                            <h1>Zacznij pomagać!</h1>
-                            <h1>Oddaj niechciane rzeczy w zaufane ręce</h1>
-                            <img src={img} alt="decoration"/>
-
+                        <Col lg={12} className={"mainHeaderText"}>
+                            <div className={"mainHeading"}>
+                                <Container className={"mainHeadingContent"}>
+                                    <Row>
+                                        <Col>
+                                            <h1>Zacznij pomagać!</h1>
+                                            <h1>Oddaj niechciane rzeczy w zaufane ręce</h1>
+                                        </Col>
+                                    </Row>
+                                    <Row className={"homeDecoration"}>
+                                        <Col>
+                                            <img src={img} alt="decoration" />
+                                        </Col>
+                                    </Row>
+                                    <Row className={"homeCallToAction"}>
+                                        <Col>
+                                            <CallToAction/>
+                                        </Col>
+                                    </Row>
+                                </Container>
+                            </div>
                         </Col>
                     </Row>
-                    <Row>
-                        <Col lg={{offset: 6, span: 6}}>
-                            <CallToAction/>
 
-                        </Col>
-                    </Row>
-                    <Row>
-
-                    </Row>
 
                 </Container>
             </div>

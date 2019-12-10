@@ -18,9 +18,9 @@ class CallToAction extends React.Component {
             <HashRouter>
                 <>
                     <ul className={"btnList"}>
-                        <li><Link to="/logowanie" className={"callToAction"}><p>ODDAJ </p><p>RZECZY</p></Link></li>
-                        <li><Link to="/logowanie" className={"callToAction"}><p>ZORGANIZUJ</p>
-                            <p>ZBIÓRKĘ</p></Link></li>
+                        <li><Link to="/logowanie" className={"callToAction"}><h1>ODDAJ <span >RZECZY</span></h1></Link></li>
+                        <li><Link to="/logowanie" className={"callToAction"}><h1>ZORGANIZUJ<span>
+                        </span>ZBIÓRKĘ<span/></h1></Link></li>
                     </ul>
                 </>
             </HashRouter>
