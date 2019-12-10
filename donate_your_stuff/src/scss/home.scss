@@ -139,11 +139,15 @@ p {
   padding: 0;
 
   .mainHeading {
-    margin-right: 222px;
-    float: right;
+    //margin-right: 222px;
+    //float: right;
 
     .mainHeadingContent {
       text-align: center;
+      //padding-right:50px ;
+      .col{
+        padding:0;
+      }
     }
   }
 

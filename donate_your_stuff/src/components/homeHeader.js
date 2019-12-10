@@ -96,7 +96,8 @@ class HomeHeader extends React.Component {
 
                     </Row>
                     <Row>
-                        <Col lg={12} className={"mainHeaderText"}>
+                        <Col lg={5} md={5} xs={12}></Col>
+                        <Col lg={6} md={6} xs={12} className={"mainHeaderText"}>
                             <div className={"mainHeading"}>
                                 <Container className={"mainHeadingContent"}>
                                     <Row>
@@ -118,6 +119,7 @@ class HomeHeader extends React.Component {
                                 </Container>
                             </div>
                         </Col>
+                        <Col lg={1}></Col>
                     </Row>
 
 

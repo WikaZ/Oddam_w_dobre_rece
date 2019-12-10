@@ -14,7 +14,8 @@ class HomeThreeCol extends React.Component {
         return (
             <div id={"homeThreeCol"}>
                 <Container fluid className={"containerStyle"}>
-                    <Row>
+                    <Row className={"threeColWrapper"}>
+
                         <Col lg={4} md={4} sm={12} className={"threeColContent"}>
                             <div className={"threeColNum"}>10</div>
                             <div className={"threeColText"}>
