@@ -1,0 +1,49 @@
+@mixin toUpperCase {
+  text-transform: uppercase;
+}
+
+#homeThreeCol {
+  background-color: $color_bgr_three_col;
+  background-image: url("../assets/three_col_bgr.png");
+}
+
+.threeColContent {
+  padding: 0 100px;
+}
+
+.threeColText {
+  margin-top: 40px;
+  margin-bottom: 102px;
+
+  h1 {
+    @include toUpperCase;
+    text-align: center;
+    font-size: 18px;
+    letter-spacing: 0;
+    line-height: 30px;
+    color: #3c3c3c;
+    font-family: $font-alt;
+    font-weight: 400;
+    margin-bottom: 33px;
+  }
+
+  p {
+    font-size: 16px;
+    letter-spacing: 0;
+    line-height: 18px;
+    color: #3c3c3c;
+    font-family: $font-alt;
+    font-weight: 300;
+    text-align: center;
+  }
+
+}
+
+.threeColNum {
+  font-size: 90px;
+  color: #5e5322;
+  font-family: $font-alt;
+  font-weight: 300;
+  text-align: center;
+  margin-top: 76px;
+}

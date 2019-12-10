@@ -62,7 +62,7 @@ class HomeHeader extends React.Component {
                                               smooth={true}
                                               offset={0}
                                               duration={500}
-                                              to={'homeThreeCol'}>O co chodzi</Link>
+                                              to={'homeThreeCol'}>O co chodzi?</Link>
                                     </li>
                                     <li>
                                         <Link activeClass="activeLink"
