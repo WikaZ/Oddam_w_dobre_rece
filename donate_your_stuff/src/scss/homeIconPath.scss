@@ -1,43 +1,49 @@
-#homeIconPath{
-  p{
+#homeIconPath {
+  p {
     color: $color_main_font;
     text-align: center;
   }
 
 }
 
-.homeIconPathHeader{
+.homeIconPathHeader {
   text-align: center;
-  padding-top:77px;
-  .iconPathHeaderText{
-    padding-bottom:23px;
+  padding-top: 77px;
+
+  .iconPathHeaderText {
+    padding-bottom: 23px;
     font-size: 38px;
     font-family: $font-base;
 
   }
-  img{
-    padding-bottom:35px;
+
+  img {
+    padding-bottom: 35px;
   }
 }
 
-.btnCallToAction{
+.btnCallToAction {
   //padding-top:34px;
   padding-bottom: 67px;
   //padding-top:34px;
-  a{
+  a {
     text-decoration: none;
-    & > span{
+
+    & > span {
       display: inline-block;
-      padding:15px 80px;
+      padding: 15px 80px;
       border: 1px solid #3C3C3C;
+
       &:hover {
         background-color: black;
         color: #3c3c3c;
       }
-      &:first-child{
+
+      &:first-child {
         margin-left: 40px;
       }
-      &:last-child{
+
+      &:last-child {
         margin-right: 40px;
       }
     }
@@ -45,43 +51,60 @@
 
   }
 }
-.callToActionWrapper{
-  padding-top:34px;
+
+.callToActionWrapper {
+  padding-top: 34px;
   padding-bottom: 13px;
 }
-.stepMainContent{
+
+.stepMainContent {
   background-color: $color_bgr_icons_path;
 }
-.step{
+
+div.stepWrapper{
+
+    padding:0 35px;
+ }
+
+.step {
   padding-top: 72px;
-  padding-bottom:64px;
+  padding-bottom: 64px;
   text-align: center;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  span{
-    font-size:18px;
+
+  span {
+    font-size: 18px;
     padding-bottom: 23px;
     padding-top: 18px;
+
+    &#thirdStep {
+      padding-top: 10px;
+    }
   }
-  p{
+
+  p {
     color: #959695;
-    font-size:16px;
-    padding-top: 17px;
+    font-size: 16px;
+    padding-top: 10px;
+    &#newLineParagraph{
+      padding-top:0;
+    }
   }
 
 
 }
 
-div.col{
+div.col {
   padding: 0;
 }
 
-.btnWrapper{
+.btnWrapper {
   display: flex;
   flex-direction: row;
   //justify-content: space-between;
-  a:first-child{
+  a:first-child {
     margin-left: 14px;
   }
 }

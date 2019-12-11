@@ -18,9 +18,10 @@ class HomeIconPathSteps extends React.Component {
     render() {
         return (
             <>
-                <Container>
+                <Container className={"stepWrapper"}>
 
                     <Row>
+
                         <Col>
 
                             <Step/>
@@ -47,7 +48,7 @@ class HomeIconPathSteps extends React.Component {
                                 </div>
                                 <span>Spakuj je</span>
                                 <img src={line}/>
-                                <p>skorzystaj z worków na śmieci</p>
+                                <p>skorzystaj z <span>worków na śmieci</span></p>
 
                             </div>
                             <Step/>
@@ -61,9 +62,9 @@ class HomeIconPathSteps extends React.Component {
                                 <div>
                                     <img src={icon_3}/>
                                 </div>
-                                <span>Zdecyduj komu chcesz pomóc</span>
+                                <span id={"thirdStep"}>Zdecyduj komu chcesz pomóc</span>
                                 <img src={line}/>
-                                <p>wybierz zaufane miejsce</p>
+                                <p>wybierz zaufane <span>miejsce</span></p>
                             </div>
                             <Step/>
 
@@ -74,16 +75,17 @@ class HomeIconPathSteps extends React.Component {
                             <Step/>
                             <div className={"step"}>
                                 <div>
-                                    <img src={icon_4  }/>
+                                    <img src={icon_4}/>
                                 </div>
                                 <span>Zamów kuriera</span>
                                 <img src={line}/>
-                                <p>kurier przyjedzie w dogodnym terminie</p>
+                                <p>kurier przyjedzie <p id={"newLineParagraph"}>w dogodnym terminie</p></p>
 
                             </div>
                             <Step/>
 
                         </Col>
+
 
                     </Row>
 
