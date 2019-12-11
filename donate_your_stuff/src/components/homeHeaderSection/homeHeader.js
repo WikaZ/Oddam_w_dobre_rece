@@ -101,8 +101,8 @@ class HomeHeader extends React.Component {
                                 <Container className={"mainHeadingContent"}>
                                     <Row>
                                         <Col  className={"alignContent"}>
-                                            <h1>Zacznij pomagać!</h1>
-                                            <h1>Oddaj niechciane rzeczy w zaufane ręce</h1>
+                                            <h1 className={"mainHeading"}>Zacznij pomagać!</h1>
+                                            <h1 className={"mainHeading"}>Oddaj niechciane rzeczy w zaufane ręce</h1>
                                         </Col>
                                     </Row>
                                     <Row className={"homeDecoration"}>

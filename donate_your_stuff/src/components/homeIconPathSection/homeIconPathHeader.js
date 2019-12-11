@@ -16,7 +16,7 @@ class HomeIconPathHeader extends React.Component{
         return(
 
                             <div className={"homeIconPathHeader"}>
-                                <h1 className={"iconPathHeaderText"}>Wystarczą 4 proste kroki</h1>
+                                <h1 className={"iconPathHeaderText mainHeading"}>Wystarczą 4 proste kroki</h1>
                                 <img src={img} alt="decoration" />
                             </div>
 
