@@ -63,12 +63,12 @@
 
 div.stepWrapper{
 
-    padding:0 35px;
+    padding:0;
  }
 
 .step {
-  padding-top: 72px;
-  padding-bottom: 64px;
+  padding: 72px 50px 64px 50px;
+
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -89,7 +89,7 @@ div.stepWrapper{
     font-size: 16px;
     padding-top: 10px;
     &#newLineParagraph{
-      padding-top:0;
+      padding-top:1px;
     }
   }
 

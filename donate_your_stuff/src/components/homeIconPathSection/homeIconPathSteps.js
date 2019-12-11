@@ -38,7 +38,7 @@ class HomeIconPathSteps extends React.Component {
                             <Step/>
 
                         </Col>
-                        <Col></Col>
+
                         <Col>
 
                             <Step/>
@@ -48,13 +48,13 @@ class HomeIconPathSteps extends React.Component {
                                 </div>
                                 <span>Spakuj je</span>
                                 <img src={line}/>
-                                <p>skorzystaj z <span>worków na śmieci</span></p>
+                                <p>skorzystaj z <p id={"newLineParagraph"}>worków na śmieci</p></p>
 
                             </div>
                             <Step/>
 
                         </Col>
-                        <Col></Col>
+
                         <Col>
 
                             <Step/>
@@ -69,7 +69,7 @@ class HomeIconPathSteps extends React.Component {
                             <Step/>
 
                         </Col>
-                        <Col></Col>
+
                         <Col>
 
                             <Step/>
