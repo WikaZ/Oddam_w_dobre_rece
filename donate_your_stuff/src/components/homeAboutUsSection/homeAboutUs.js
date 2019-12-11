@@ -4,6 +4,7 @@ import Col from "react-bootstrap/Col";
 import Container from "react-bootstrap/Container";
 import img from "../../assets/Decoration.svg";
 import imgPeople from "../../assets/People.jpg";
+import imgSignature from "../../assets/Signature.svg";
 
 class HomeAboutUs extends React.Component {
     constructor(props) {
@@ -25,6 +26,9 @@ class HomeAboutUs extends React.Component {
                                     Nori grape silver beet broccoli kombu beet greens fava bean potato quandong celery.
                                     Bunya nuts black-eyed pea prairie turnip leek lentil turnip greens parsnip.
                                 </p>
+                                <div id={"imgSignature"}>
+                                    <img src={imgSignature} alt="Signature"/>
+                                </div>
                             </div>
 
                         </Col>
