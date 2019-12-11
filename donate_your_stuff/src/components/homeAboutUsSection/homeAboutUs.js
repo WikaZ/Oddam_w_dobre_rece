@@ -3,6 +3,7 @@ import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Container from "react-bootstrap/Container";
 import img from "../../assets/Decoration.svg";
+import imgPeople from "../../assets/People.jpg";
 
 class HomeAboutUs extends React.Component {
     constructor(props) {
@@ -12,9 +13,10 @@ class HomeAboutUs extends React.Component {
 
     render() {
         return (
-            <div id={"homeAboutUs"} style={{height: "350px", backgroundColor: "blue"}}>
-                <Container>
+            <div id={"homeAboutUs"}>
+                <Container-fluid>
                     <Row>
+
                         <Col lg={6} md={6} xs={12}>
                             <div className={"homeAboutUsContent"}>
                                 <h1 className={"mainHeading"}>O nas</h1>
@@ -26,13 +28,15 @@ class HomeAboutUs extends React.Component {
                             </div>
 
                         </Col>
+
                         <Col lg={6} md={6} xs={12}>
                             <div className={"homeAboutUsImage"}>
+                                <img src={imgPeople} alt="People"/>
                             </div>
 
                         </Col>
                     </Row>
-                </Container>
+                </Container-fluid>
 
             </div>
 

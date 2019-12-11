@@ -1,4 +1,34 @@
-.homeAboutUsImage{
+#homeAboutUs {
   background-color: #F0F1F1;
-  background-image: url("../assets/People.jpg");
+}
+
+.col-lg-6, .col-md-6 {
+  padding: 0;
+}
+
+.homeAboutUsImage {
+  //background-image:
+}
+
+.homeAboutUsContent {
+  padding: 197px 134px 0 134px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  h1 {
+    text-align: center;
+    padding-bottom: 38px;
+  }
+
+  img {
+    padding-bottom: 50px;
+  }
+
+  & > p {
+    font-size: 30px;
+    color: $color_main_font;
+    text-align: center;
+    letter-spacing: -1px;
+  }
 }
