@@ -7,7 +7,10 @@
 }
 
 .homeAboutUsImage {
-  //background-image:
+  img {
+    object-fit: contain;
+    display: block;
+  }
 }
 
 .homeAboutUsContent {
