@@ -2,7 +2,7 @@ import React from 'react';
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Container from "react-bootstrap/Container";
-import img from "../assets/Decoration.svg";
+import img from "../../assets/Decoration.svg";
 import HomeIconPathHeader from "./homeIconPathHeader";
 import HomeIconPathSteps from "./homeIconPathSteps";
 import HomeIconPathFooter from "./homeIconPathFooter";
@@ -16,11 +16,11 @@ class HomeIconPath extends React.Component {
     render() {
         return (
             <>
-            <Container>
+            <Container id={"homeIconPath"} >
                 <Row>
                     <Col lg={3} md={3}></Col>
                     <Col lg={6} md={6} xs={12}>
-                        <HomeIconPathHeader/>
+                        <HomeIconPathHeader />
                     </Col>
                     <Col lg={3} md={3}></Col>
 

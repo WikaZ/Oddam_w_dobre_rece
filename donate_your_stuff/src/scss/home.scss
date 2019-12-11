@@ -213,13 +213,13 @@ p {
 }
 .callToAction {
 
-  span, h1 {
+  span {
     color: $color_main_font;
     font-size: 36px;
     line-height: 45px;
     margin-bottom: 0;
     font-family: $font-alt;
-    font-weight: 100;
+    font-weight:lighter;
     text-align: center;
 
     &:first-child {

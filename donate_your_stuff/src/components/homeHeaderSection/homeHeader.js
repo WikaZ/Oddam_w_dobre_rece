@@ -3,7 +3,7 @@ import Button from "react-bootstrap/Button";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Container from "react-bootstrap/Container";
-import img from "../assets/Decoration.svg";
+import img from "../../assets/Decoration.svg";
 import {HashRouter} from "react-router-dom";
 import {
     BrowserRouter as Router,
@@ -12,8 +12,8 @@ import {
     Link as RouterLink
 } from "react-router-dom";
 import MainUpperMenuBar from "./mainUpperNav";
-import LogIn from "./logIn";
-import SignUp from "./signUp";
+import LogIn from "../logInFormSection/logIn";
+import SignUp from "../signUpFormSection/signUp";
 import CallToAction from "./callToAction"
 
 

@@ -6,8 +6,8 @@ import {
     Route,
     Link
 } from "react-router-dom";
-import LogIn from "./logIn";
-import SignUp from "./signUp"
+import LogIn from "../logInFormSection/logIn";
+import SignUp from "../signUpFormSection/signUp"
 
 
 class MainUpperMenuBar extends React.Component {

@@ -15,7 +15,7 @@ class BtnCallToAction extends React.Component {
             <HashRouter>
                 <>
                     <div className={"btnCallToAction"}>
-                        <Link to="/logowanie" className={"callToAction"}><h1>ODDAJ <span>RZECZY</span></h1></Link>
+                        <Link to="/logowanie" className={"callToAction"}><span>ODDAJ <span>RZECZY</span></span></Link>
                     </div>
 
 

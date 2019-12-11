@@ -25,8 +25,9 @@
   padding-top:34px;
   a{
     text-decoration: none;
-    h1{
-      padding:15px 96px;
+    & > span{
+      display: inline-block;
+      padding:15px 80px;
       border: 1px solid #3C3C3C;
       &:hover {
         background-color: black;
@@ -37,7 +38,7 @@
   }
 }
 .stepMainContent{
-background-color: $color_bgr_icons_path;
+  background-color: $color_bgr_icons_path;
 }
 .step{
   padding-top: 72px;
