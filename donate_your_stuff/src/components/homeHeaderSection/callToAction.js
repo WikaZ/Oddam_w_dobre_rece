@@ -6,6 +6,11 @@ import {
     Route,
     Link
 } from "react-router-dom";
+import BtnCallToAction from "../homeIconPathSection/btnCallToAction";
+import BtnSignUp from "../homeHeaderSection/btnSignUp";
+import Row from "react-bootstrap/Row";
+import Col from "react-bootstrap/Col";
+import Container from "react-bootstrap/Container";
 
 class CallToAction extends React.Component {
     constructor(props) {
@@ -17,11 +22,21 @@ class CallToAction extends React.Component {
         return (
             <HashRouter>
                 <>
-                    <ul className={"btnList"}>
-                        <li><Link to="/logowanie" className={"callToAction"}><h1>ODDAJ <span >RZECZY</span></h1></Link></li>
-                        <li><Link to="/logowanie" className={"callToAction"}><h1>ZORGANIZUJ<span>
-                        </span>ZBIÓRKĘ<span/></h1></Link></li>
-                    </ul>
+                   <div className={"btnWrapper"}>
+
+                                <Link to="/logowanie" className={"callToAction"}>
+                                    {/*<h1>ODDAJ <span >RZECZY</span></h1>*/}
+                                    <BtnCallToAction>
+                                        <span>ODDAJ <span>RZECZY</span></span>
+                                    </BtnCallToAction>
+                                </Link>
+
+                                <Link to="/logowanie" className={"callToAction"}>
+                                    <BtnSignUp/>
+                                </Link>
+
+
+                    </div>
                 </>
             </HashRouter>
         )

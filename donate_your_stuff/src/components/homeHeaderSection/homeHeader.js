@@ -95,22 +95,23 @@ class HomeHeader extends React.Component {
                     </Row>
                     <Row>
                         <Col lg={5} md={5} xs={12}></Col>
-                        <Col lg={6} md={6} xs={12} className={"mainHeaderText"}>
+                        <Col lg={1} md={1}></Col>
+                        <Col lg={5} md={5} xs={12} className={"mainHeaderText"}>
                             <div className={"mainHeading"}>
                                 <Container className={"mainHeadingContent"}>
                                     <Row>
-                                        <Col>
+                                        <Col  className={"alignContent"}>
                                             <h1>Zacznij pomagać!</h1>
                                             <h1>Oddaj niechciane rzeczy w zaufane ręce</h1>
                                         </Col>
                                     </Row>
                                     <Row className={"homeDecoration"}>
-                                        <Col>
+                                        <Col className={"alignContent"}>
                                             <img src={img} alt="decoration" />
                                         </Col>
                                     </Row>
                                     <Row className={"homeCallToAction"}>
-                                        <Col>
+                                        <Col className={"alignContent"}>
                                             <CallToAction/>
                                         </Col>
                                     </Row>

@@ -7,11 +7,12 @@ body {
   font-family: $font-base;
   background-color: white;
   color: $color_main_font;
-  .container{
 
-    padding:0;
-    }
+  .container {
+
+    padding: 0;
   }
+}
 
 
 p {
@@ -96,6 +97,7 @@ p {
     margin-right: 20px;
     padding: 12px 20px 12px 20px;
     border: 1px solid transparent;
+
     &:last-child {
       margin-right: 0;
     }
@@ -140,7 +142,8 @@ p {
 
 
 .mainHeaderText {
-  margin-top: 224px;
+  margin-top: 220px;
+
   padding: 0;
 
   .mainHeading {
@@ -150,8 +153,8 @@ p {
     .mainHeadingContent {
       text-align: center;
       //padding-right:50px ;
-      .col{
-        padding:0;
+      .col {
+        padding: 0;
       }
     }
   }
@@ -166,6 +169,9 @@ p {
     font-weight: 400;
     text-align: center;
 
+    &:first-child {
+      margin-bottom: 15px;
+    }
 
   }
 }
@@ -177,40 +183,40 @@ p {
 //call to action btn
 .homeCallToAction {
   margin-top: 64px;
-  margin-bottom: 261px;
-
-
-
-  .btnList {
-
-    li {
-      &:hover {
-        background-color: black;
-        color: #3c3c3c;
-      }
-
-      display: inline-block;
-      border: 1px solid $color_main_font;
-
-      &:first-child {
-        padding: 15px 96px;
-      }
-
-      &:last-child {
-        padding: 15px 49px;
-      }
-
-
-      a {
-        text-decoration: none;
-      }
-
-      &:first-child {
-        margin-right: 35px;
-      }
-    }
-  }
+  margin-bottom: 200px;
 }
+
+
+//  .btnList {
+//
+//    li {
+//      &:hover {
+//        background-color: black;
+//        color: #3c3c3c;
+//      }
+//
+//      display: inline-block;
+//      border: 1px solid $color_main_font;
+//
+//      &:first-child {
+//        padding: 15px 96px;
+//      }
+//
+//      &:last-child {
+//        padding: 15px 49px;
+//      }
+//
+//
+//      a {
+//        text-decoration: none;
+//      }
+//
+//      &:first-child {
+//        margin-right: 35px;
+//      }
+//    }
+//  }
+//}
 .callToAction {
 
   span {
@@ -218,8 +224,8 @@ p {
     font-size: 36px;
     line-height: 45px;
     margin-bottom: 0;
-    font-family: $font-alt;
-    font-weight:lighter;
+    font-family: $font-base;
+    font-weight: lighter;
     text-align: center;
 
     &:first-child {
@@ -233,4 +239,65 @@ p {
   }
 
 
+}
+
+
+.btnSignUp {
+
+
+  span {
+    color: $color_main_font;
+    font-size: 36px;
+    line-height: 45px;
+    margin-bottom: 0;
+    font-family: $font-base;
+    font-weight: lighter;
+    text-align: center;
+
+    &:first-child {
+      //padding-bottom: 10px;
+      //margin:0;
+    }
+  }
+
+
+}
+
+.btnSignUpWrapper {
+  padding-bottom: 67px;
+  //padding-top: 34px;
+
+  a {
+    text-decoration: none;
+
+    & > span {
+
+      display: inline-block;
+      padding: 15px 50px;
+      border: 1px solid #3C3C3C;
+
+      &:hover {
+        background-color: black;
+        color: #3c3c3c;
+      }
+    }
+
+  }
+}
+
+.headerButtons {
+  display: flex;
+  justify-content: center;
+
+  & > a {
+    margin-right: 100px;
+  }
+}
+
+.col-lg-1 {
+  padding: 0;
+}
+
+.alignContent{
+  text-align: center;
 }

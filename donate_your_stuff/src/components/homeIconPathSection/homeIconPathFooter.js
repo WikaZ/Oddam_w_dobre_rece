@@ -3,6 +3,7 @@ import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Container from "react-bootstrap/Container";
 import BtnCallToAction from "./btnCallToAction";
+import {Link} from "react-router-dom";
 
 class HomeIconPathFooter extends React.Component {
     constructor(props) {
@@ -12,8 +13,11 @@ class HomeIconPathFooter extends React.Component {
 
     render() {
         return (
-
-            <BtnCallToAction/>
+<div className={"callToActionWrapper"}>
+            <BtnCallToAction>
+            <span>ODDAJ <span>RZECZY</span></span>
+            </BtnCallToAction>
+</div>
 
         )
     }

@@ -21,8 +21,9 @@
 }
 
 .btnCallToAction{
+  //padding-top:34px;
   padding-bottom: 67px;
-  padding-top:34px;
+  //padding-top:34px;
   a{
     text-decoration: none;
     & > span{
@@ -33,9 +34,20 @@
         background-color: black;
         color: #3c3c3c;
       }
+      &:first-child{
+        margin-left: 40px;
+      }
+      &:last-child{
+        margin-right: 40px;
+      }
     }
 
+
   }
+}
+.callToActionWrapper{
+  padding-top:34px;
+  padding-bottom: 13px;
 }
 .stepMainContent{
   background-color: $color_bgr_icons_path;
@@ -63,4 +75,13 @@
 
 div.col{
   padding: 0;
+}
+
+.btnWrapper{
+  display: flex;
+  flex-direction: row;
+  //justify-content: space-between;
+  a:first-child{
+    margin-left: 14px;
+  }
 }
