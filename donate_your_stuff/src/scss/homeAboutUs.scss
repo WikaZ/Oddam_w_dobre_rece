@@ -5,18 +5,20 @@
 .col-lg-6, .col-md-6 {
   padding: 0;
 }
-
+//
 .homeAboutUsImage {
-  img {
-    object-fit: contain;
-    display: block;
-    width: 100%;
-    height: auto;
-  }
+img {
+float: right;
+  //object-fit: contain;
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
 }
 
 .homeAboutUsContent {
-  padding: 197px 134px 0 134px;
+  padding: 197px 134px 132px 134px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -32,12 +34,14 @@
   }
 
   #imgSignature {
-    position: relative;
+    //position: relative;
+display: inline-block;
 
     img {
-      position: absolute;
-      right: 0;
-      top: 63px;
+      //position: absolute;
+      //right: 0;
+      float: right;
+      padding-top: 63px;
     }
 
   }
