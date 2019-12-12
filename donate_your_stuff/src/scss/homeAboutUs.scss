@@ -7,14 +7,23 @@
 }
 //
 .homeAboutUsImage {
-img {
-float: right;
-  //object-fit: contain;
+  background-image: url('../assets/People.jpg');
+  //bgr-size:cover---dla duzych,
+  //bgr-size:contain---> dla mniejszych
+  //background-size: contain;
+  background-repeat: no-repeat;
   display: block;
   width: 100%;
   height: auto;
+
+
+
 }
 
+@media (max-width: 1500px) {
+  .homeAboutUsImage{
+    background-size: contain;
+  }
 }
 
 .homeAboutUsContent {

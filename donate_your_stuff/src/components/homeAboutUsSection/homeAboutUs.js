@@ -33,10 +33,10 @@ class HomeAboutUs extends React.Component {
 
                         </Col>
 
-                        <Col lg={6} md={6} xs={12} >
-                            <div className={"homeAboutUsImage"} >
-                                <img src={imgPeople}  alt="People"/>
-                            </div>
+                        <Col lg={6} md={6} xs={12} className={"homeAboutUsImage"}>
+                            {/*<div  >*/}
+                            {/*    <img src={imgPeople}  alt="People"/>*/}
+                            {/*</div>*/}
 
                         </Col>
                     </Row>
