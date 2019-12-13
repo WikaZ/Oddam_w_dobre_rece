@@ -94,7 +94,7 @@ class HomeHeader extends React.Component {
 
                     </Row>
                     <Row>
-                        <Col lg={5} md={5} xs={12}></Col>
+                        <Col lg={5} md={5} xs={12} className={"resetPaddings"}></Col>
                         <Col lg={1} md={1}></Col>
                         <Col lg={5} md={5} xs={12} className={"mainHeaderText"}>
                             <div className={"mainHeading"}>

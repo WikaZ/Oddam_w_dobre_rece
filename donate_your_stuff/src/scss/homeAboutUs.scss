@@ -10,7 +10,7 @@
   background-image: url('../assets/People.jpg');
   //bgr-size:cover---dla duzych,
   //bgr-size:contain---> dla mniejszych
-  //background-size: contain;
+  //object-fit: contain;
   background-repeat: no-repeat;
   display: block;
   width: 100%;
@@ -22,7 +22,7 @@
 
 @media (max-width: 1500px) {
   .homeAboutUsImage{
-    background-size: contain;
+    background-size: cover;
   }
 }
 
