@@ -36,13 +36,13 @@
         color: #3c3c3c;
       }
 
-      &:first-child {
-        margin-left: 40px;
-      }
-
-      &:last-child {
-        margin-right: 40px;
-      }
+      //&:first-child {
+      //  margin-left: 40px;
+      //}
+      //
+      //&:last-child {
+      //  margin-right: 40px;
+      //}
     }
 
 
@@ -52,6 +52,8 @@
 .callToActionWrapper {
   padding-top: 34px;
   padding-bottom: 13px;
+  display: inline-block;
+  margin:0 auto;
 }
 
 .stepMainContent {
@@ -100,8 +102,14 @@ div.col {
 .btnWrapper {
   display: flex;
   flex-direction: row;
-  //justify-content: space-between;
+  justify-content: space-between;
+  margin: 0 37px;
   a:first-child {
-    margin-left: 10px;
+    //margin-left: 16px;
   }
+}
+
+.center{
+ display: flex;
+  justify-content: center;
 }

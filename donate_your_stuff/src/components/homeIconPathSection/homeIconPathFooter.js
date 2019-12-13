@@ -13,7 +13,7 @@ class HomeIconPathFooter extends React.Component {
 
     render() {
         return (
-<div className={"callToActionWrapper"}>
+<div className={"callToActionWrapper "}>
             <BtnCallToAction>
             <span>ODDAJ <span>RZECZY</span></span>
             </BtnCallToAction>
