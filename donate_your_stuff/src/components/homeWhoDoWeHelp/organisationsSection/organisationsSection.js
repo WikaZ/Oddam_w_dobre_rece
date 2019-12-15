@@ -10,7 +10,7 @@ class OrganisationsSection extends React.Component{
 
     render() {
         return(
-            <p style={{color:"red"}}>OrganisationsSection</p>
+            <h1>org</h1>
         )
     }
 }

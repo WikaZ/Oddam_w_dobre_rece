@@ -19,7 +19,7 @@ class WhoDoWeHelpWrapper extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            currentLinkIndex: "1"
+            currentLinkIndex: 1
         }
     }
 
@@ -41,20 +41,21 @@ class WhoDoWeHelpWrapper extends React.Component {
 
         return (
             <>
-                <ul>
+                <div >
+                    <ul className={"whoDoWeHelpLinks"}>
 
-                    {this.props.links.map((el, i) => {
+                        {this.props.links.map((el, i) => {
 
-                        return (
-                            <li key={i}><a href="" onClick={(e) => this.handlePassLinksId(e, i)} id={i}>{el}</a>
-                            </li>
+                            return (
+                                <li key={i} onClick={(e) => this.handlePassLinksId(e, i)} id={i}><a href="" >{el}</a>
+                                </li>
 
-                        )
+                            )
 
-                    })
-                    }
-                </ul>
-
+                        })
+                        }
+                    </ul>
+                </div>
 
                 {currentLinkIndex === 0 ? <FundationsSection/> :
                     (currentLinkIndex === 1 ? <OrganisationsSection/> : <LocalDonationCenterSection/>)}
