@@ -1,4 +1,5 @@
 import React from 'react';
+import HomeWhoDoWeHelpWrapper from './whoDoWeHelpWrapper'
 
 class HomeWhoDoWeHelp extends React.Component{
     constructor(props) {
@@ -10,8 +11,8 @@ class HomeWhoDoWeHelp extends React.Component{
 
     render() {
         return(
-            <div id={"homeWhoDoWeHelp"} style={{height:"350px", backgroundColor:"orange"}}>
-                <p>Hi, Im HomeWhoDoWeHelp</p>
+            <div id={"homeWhoDoWeHelp"} >
+                <HomeWhoDoWeHelpWrapper links={["Fundacjom", "Organizacjom pozarządowym", "Lokalnym zbiórkom"]}/>
             </div>
 
         )

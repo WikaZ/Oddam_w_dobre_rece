@@ -3,7 +3,7 @@ import HomeHeader from './homeHeaderSection/homeHeader';
 import HomeThreeCol from './homeThreeColSection/homeThreeCol'
 import HomeIconPath from './homeIconPathSection/homeIconPath'
 import HomeAboutUs from './homeAboutUsSection/homeAboutUs'
-import HomeWhoDoWeHelp from './homeWhoDoWeHelp'
+import HomeWhoDoWeHelp from './homeWhoDoWeHelp/homeWhoDoWeHelp'
 import HomeContactUs from './homeContactUs'
 import HomeFooter from './homeFooter'
 
