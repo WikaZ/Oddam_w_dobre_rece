@@ -96,6 +96,7 @@ class FundationsSection extends React.Component {
                         </Col>
                         <Col lg={1} md={1} xs={1}></Col>
                     </Row>
+
                     <Row key={i}>
                         <Col lg={1} md={1} xs={1}></Col>
                         <Col lg={10} md={10} xs={10}>
@@ -106,12 +107,7 @@ class FundationsSection extends React.Component {
 
                         <Col lg={1} md={1} xs={1}></Col>
                     </Row>
-                    {/*<Row>*/}
-                    {/*    <Col lg={1} md={1} xs={1}></Col>*/}
-                    {/*    <Col lg={10} md={10} xs={10} className={'line'}>*/}
-                    {/*    </Col>*/}
-                    {/*    <Col lg={1} md={1} xs={1}></Col>*/}
-                    {/*< /Row>*/}
+
                 </>
             )
         });
@@ -126,17 +122,6 @@ class FundationsSection extends React.Component {
 
         }
 
-        //     function getPage(
-        //
-        //     currentPage
-        // )
-        //     {
-        //         let endOfList = currentPage * elemPerPage < arrayToShowLength ? currentPage * elemPerPage : arrayToShowLength
-        //         return (
-        //           elementsToRender.slice((currentPage - 1) * elemPerPage, endOfList)
-        //         )
-        //     }
-        //
 
 
         return (
@@ -153,23 +138,21 @@ class FundationsSection extends React.Component {
                         <Col lg={3} md={3}>
                         </Col>
                     </Row>
-                    <Row>
-                        {/*<Col lg={1} md={1}>*/}
-                        {/*</Col>*/}
-                        <Col lg={12} md={12} xs={12}>
+                    {/*<Row>*/}
+
+                        {/*<Col lg={12} md={12} xs={12}>*/}
                             <section>
 
                                 {elements}
-                                <ul className={"pages"}>
-                                    {pageNumbers}
-                                </ul>
+
 
                             </section>
-                        </Col>
-                        {/*<Col lg={1} md={1}>*/}
-                        {/*</Col>*/}
-
+                    <Row className={'pagination'}>
+                    <ul className={"pages"}>
+                        {pageNumbers}
+                    </ul>
                     </Row>
+
                 </Container>
             </>
         )

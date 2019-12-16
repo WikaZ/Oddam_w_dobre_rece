@@ -77,11 +77,12 @@
 
   .donateListDescription {
 
-    h1{
+    h1 {
       font-weight: lighter;
       font-family: $font-alt;
       font-size: 26px;
     }
+
     p {
       text-align: left;
       line-height: 30px;
@@ -104,24 +105,30 @@
 .pages {
   list-style: none;
   display: flex;
+  margin: 0 auto;
 
 
   li {
     display: inline-block;
-    margin-right: 10px;
-    padding: 5px 10px;
+    margin-right: 20px;
+    padding: 20px 15px;
     color: black;
     cursor: pointer;
-    box-shadow: 0 1px 1px 1px #bbabaa;
 
-    &:active {
-      background-color: pink;
-    }
+      border:1px solid transparent;
+      &:active {
+        border:1px solid black
+      }
+
 
   }
 
 
-}
+
+  }
+
+
+
 
 .sectionHeader {
 
@@ -129,7 +136,12 @@
 
 }
 
-.line{
-border-bottom:1px solid $color_main_font;
-  margin:0 72px;
+.line {
+  border-bottom: 1px solid $color_main_font;
+  margin: 0 72px;
+}
+
+.pagination {
+  padding-top: 66px;
+
 }
