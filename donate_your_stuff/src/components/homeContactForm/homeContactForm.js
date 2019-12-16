@@ -4,32 +4,58 @@ import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import img from "../../assets/Decoration.svg";
 
-class HomeContactForm extends React.Component{
+class HomeContactForm extends React.Component {
     constructor(props) {
         super(props);
-        this.state={
-
-        }
+        this.state = {}
     }
 
     render() {
-        return(
-            <div className={"contactForm"}>
-                <div className={'formHeader'}><h1>Skontaktuj się z nami</h1>
-                <img src={img} alt="dekoracja"/>
-                </div>
-                <label htmlFor={"name"}>Wpisz swoje imię</label>
-                <input type="text" placeholder={'Krzysztof'}/>
-                    <label htmlFor={"name"}>Wpisz swój email</label>
-                <input type="email" placeholder={'abc@kyz.pl'}/>
-                    <label htmlFor={"message"}>Wpisz swoją wiadomość</label>
-                    <textarea name="message" id="" cols="30" rows="10" placeholder={" Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam eos explicabo inventore officia perspiciatis quia ullam velit. Ad cum magnam pariatur soluta suscipit? Dolorum perspiciatis, quae. Molestiae quia voluptas voluptatibus?"}></textarea>
-                    <input type="submit" value={'Wyślij'}/>
+        return (
+            <Container className={"contactForm"}>
+                <Row className={'formHeader'}>
+                    <h1>Skontaktuj się z nami</h1>
+                    <img src={img} alt="dekoracja"/>
+                </Row>
+
+                <form action="" className={"form"}>
+                    <Row>
+                        <Col id={"formLeftCol"} lg={6} md={6} xs={12}>
+                            <label htmlFor={"name"}>Wpisz swoje imię</label>
+                            <input type="text" placeholder={'Krzysztof'}/>
+                        </Col>
+
+                        <Col id={"formRightCol"} lg={6} md={6} xs={12}>
+                            <label htmlFor={"name"}>Wpisz swój email</label>
+                            <input type="email" placeholder={'abc@kyz.pl'}/>
+                        </Col>
+                    </Row>
+
+                    <Row>
+                        <Col id={"formMessage"}>
+                        <label htmlFor={"message"}>Wpisz swoją wiadomość</label>
+                        </Col>
+                    </Row>
+                    <Row>
+                        <Col id={'formTextarea'} lg={12} md={12}>
+                            <textarea name="message" id=""
+                                      placeholder={" Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam eos explicabo inventore officia perspiciatis quia ullam velit. Ad cum magnam pariatur soluta suscipit? Dolorum perspiciatis, quae. Molestiae quia voluptas voluptatibus?"}></textarea>
+                        </Col>
+                    </Row>
+                    <Row>
+                        <Col></Col>
+                        <Col lg={2} md={2} xs={12}>
+                        <input type="submit" value={'Wyślij'}/>
+                        </Col>
+                    </Row>
+
+                </form>
 
 
-            </div>
+            </Container>
 
         )
     }
 }
-export default  HomeContactForm
+
+export default HomeContactForm

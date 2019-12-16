@@ -15,10 +15,11 @@ class HomeContactUs extends React.Component{
     render() {
         return(
             <div  id={"homeContactUs"}>
-                <Container fluid>
+                <Container fluid className={"contactUsMainForm"}>
                     <Row>
-                        <Col></Col>
-                        <Col><HomeContactForm/></Col>
+                        <Col lg={6} md={6} ></Col>
+                        <Col lg={6} md={6} xs={12}><HomeContactForm/></Col>
+
                     </Row> <Row>
                     <Col></Col>
                     <Col></Col>
