@@ -58,7 +58,7 @@ class FundationsSection extends React.Component {
                 }
 
             ],
-            currentPage: '',
+            currentPage: 1,
             elPerPage: 3,
 
 
@@ -96,17 +96,17 @@ class FundationsSection extends React.Component {
                         </Col>
                         <Col lg={1} md={1} xs={1}></Col>
                     </Row>
+                    {currentEl.length - 1 > i ?
+                        <Row>
+                            <Col lg={1} md={1} xs={1}></Col>
+                            <Col lg={10} md={10} xs={10}>
+                                <div className={"line"}>
 
-                    <Row>
-                        <Col lg={1} md={1} xs={1}></Col>
-                        <Col lg={10} md={10} xs={10}>
-                            <div className={"line"}>
+                                </div>
+                            </Col>
 
-                            </div>
-                        </Col>
-
-                        <Col lg={1} md={1} xs={1}></Col>
-                    </Row>
+                            <Col lg={1} md={1} xs={1}></Col>
+                        </Row> : null}
 
                 </>
             )
@@ -116,12 +116,11 @@ class FundationsSection extends React.Component {
         for (let i = 1; i <= Math.ceil(elementsToRender.length / elPerPage); i++) {
 
             const element = <li key={i} onClick={(e) => this.handleClickPage(e, i)}
-                                className={this.state.currentPage === i ? "" : "active"}>{i}</li>
+                                className={this.state.currentPage === i ? "activePage" : ""}>{i}</li>
             pageNumbers.push(element)
 
 
         }
-
 
 
         return (
@@ -140,17 +139,17 @@ class FundationsSection extends React.Component {
                     </Row>
                     {/*<Row>*/}
 
-                        {/*<Col lg={12} md={12} xs={12}>*/}
-                            <section>
+                    {/*<Col lg={12} md={12} xs={12}>*/}
+                    <section>
 
-                                {elements}
+                        {elements}
 
 
-                            </section>
+                    </section>
                     <Row className={'pagination'}>
-                    <ul className={"pages"}>
-                        {pageNumbers}
-                    </ul>
+                        <ul className={"pages"}>
+                            {pageNumbers}
+                        </ul>
                     </Row>
 
                 </Container>

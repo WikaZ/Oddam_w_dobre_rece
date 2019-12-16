@@ -7,13 +7,22 @@
   padding: 64px 85px 80px 85px;
 }
 
-@mixin mainHeading{
+@mixin mainHeading {
   text-align: center;
   font-size: 36px;
   font-family: $font-base;
   padding-top: 83px;
   padding-bottom: 34px;
   color: inherit;
+}
+ li .active{
+  border:1px solid $color_main_font;
+   background-color: greenyellow;
+}
+
+.activePage{
+  border:1px solid greenyellow;
+  background-color: deeppink;
 }
 
 .WhoDoWeHelpHeader {
@@ -49,10 +58,12 @@
 
   li {
     cursor: pointer;
+
     display: inline-block;
     list-style-type: none;
     border: 1px solid transparent;
     margin-right: 50px;
+
 
     &:hover {
       border: 1px solid #CECECE;
@@ -62,18 +73,32 @@
       margin-right: 0;
     }
 
+    &:first-child {
+      a {
+        padding: 35px 45px;
+      }
+    }
+
     a {
       display: inline-block;
-      margin: 47px 40px;
+      //margin: 47px 40px;
+      padding: 15px 45px 20px 45px;
       text-decoration: none;
       font-size: 24px;
-      color: $color_main_font;
+
+
+      p {
+        color: $color_main_font;
+        font-size: 24px;
+      }
     }
 
 
   }
 
 }
+
+
 
 .donationOrgList {
   padding: 30px 88px;
@@ -119,19 +144,17 @@
     color: black;
     cursor: pointer;
 
-      border:1px solid transparent;
-      &:active {
-        border:1px solid black
-      }
+    border: 1px solid transparent;
+
+    &:active {
+      border: 1px solid black
+    }
 
 
   }
 
 
-
-  }
-
-
+}
 
 
 .sectionHeader {

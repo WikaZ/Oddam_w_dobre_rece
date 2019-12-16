@@ -57,7 +57,7 @@ class OrganisationsSection extends React.Component {
         const {elementsToRender, elPerPage, currentPage} = this.state;
         const stop = currentPage * elPerPage;
         const start = stop - elPerPage;
-        const currentEl = elementsToRender.slice(start, stop)
+        const currentEl = elementsToRender.slice(start, stop);
         const elements = currentEl.map((el, i) => {
             return (
                 <>
@@ -72,17 +72,19 @@ class OrganisationsSection extends React.Component {
                         </Col>
                         <Col lg={1} md={1} xs={1}></Col>
                     </Row>
+                    {currentEl.length - 1 > i ?
+                        <Row key={i}>
+                            <Col lg={1} md={1} xs={1}></Col>
+                            <Col lg={10} md={10} xs={10}>
+                                <div className={"line"}>
 
-                    <Row key={i}>
-                        <Col lg={1} md={1} xs={1}></Col>
-                        <Col lg={10} md={10} xs={10}>
-                            <div className={"line"}>
+                                </div>
+                            </Col>
 
-                            </div>
-                        </Col>
-
-                        <Col lg={1} md={1} xs={1}></Col>
-                    </Row>
+                            <Col lg={1} md={1} xs={1}></Col>
+                        </Row>
+                        : null
+                    }
                 </>
             )
         });

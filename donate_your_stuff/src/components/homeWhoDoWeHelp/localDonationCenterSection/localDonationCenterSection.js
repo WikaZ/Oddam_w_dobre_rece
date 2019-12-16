@@ -55,17 +55,17 @@ class LocalDonationCenterSection extends React.Component {
                         </Col>
                         <Col lg={1} md={1} xs={1}></Col>
                     </Row>
+                    {currentEl.length - 1 > i ?
+                        <Row key={i}>
+                            <Col lg={1} md={1} xs={1}></Col>
+                            <Col lg={10} md={10} xs={10}>
+                                <div className={"line"}>
 
-                    <Row key={i}>
-                        <Col lg={1} md={1} xs={1}></Col>
-                        <Col lg={10} md={10} xs={10}>
-                            <div className={"line"}>
+                                </div>
+                            </Col>
 
-                            </div>
-                        </Col>
-
-                        <Col lg={1} md={1} xs={1}></Col>
-                    </Row>
+                            <Col lg={1} md={1} xs={1}></Col>
+                        </Row> : null}
                 </>
             )
         });
@@ -88,7 +88,8 @@ class LocalDonationCenterSection extends React.Component {
                         <Col lg={3} md={3}>
                         </Col>
                         <Col lg={6} md={6} xs={6}>
-                            <p className={"sectionHeader"}>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci aperiam doloribus esse excepturi,
+                            <p className={"sectionHeader"}>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                Adipisci aperiam doloribus esse excepturi,
                                 illo iste mollitia nostrum odio quam.</p>
                         </Col>
                         <Col lg={3} md={3}>
@@ -103,7 +104,7 @@ class LocalDonationCenterSection extends React.Component {
                     </section>
                     <Row className={'pagination'}>
                         <ul className={"pages"}>
-                            {pageNum.length === 1 ? null : pageNum }
+                            {pageNum.length === 1 ? null : pageNum}
                         </ul>
                     </Row>
 

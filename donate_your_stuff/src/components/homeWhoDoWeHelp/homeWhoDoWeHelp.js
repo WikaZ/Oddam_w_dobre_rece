@@ -20,7 +20,7 @@ class HomeWhoDoWeHelp extends React.Component {
                 </section>
                 <div id={"homeWhoDoWeHelp"}>
 
-                    <HomeWhoDoWeHelpWrapper links={["Fundacjom", "Organizacjom pozarządowym", "Lokalnym zbiórkom"]}/>
+                    <HomeWhoDoWeHelpWrapper links={[<p>Fundacjom</p>, <p>Organizacjom <p> pozarządowym</p></p>, <p>Lokalnym <p>zbiórkom</p></p>]}/>
 
                 </div>
             </>

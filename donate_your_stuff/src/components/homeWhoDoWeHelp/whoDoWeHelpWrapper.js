@@ -47,7 +47,7 @@ class WhoDoWeHelpWrapper extends React.Component {
                         {this.props.links.map((el, i) => {
 
                             return (
-                                <li key={i} onClick={(e) => this.handlePassLinksId(e, i+1)} id={i}><a href="" >{el}</a>
+                                <li key={i} onClick={(e) => this.handlePassLinksId(e, i)} id={i} className={currentLinkIndex === i ? "active" : "nonactive"}><a href="" >{el}</a>
                                 </li>
 
                             )
