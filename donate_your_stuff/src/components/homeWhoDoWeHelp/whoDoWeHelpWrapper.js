@@ -4,7 +4,7 @@ import {
     BrowserRouter as Router,
     Switch,
     Route,
-    Link as RouterLink
+    Link
 } from "react-router-dom";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
@@ -68,4 +68,7 @@ class WhoDoWeHelpWrapper extends React.Component {
     }
 }
 
+
 export default WhoDoWeHelpWrapper
+
+

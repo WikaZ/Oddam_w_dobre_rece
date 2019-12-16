@@ -1,7 +1,10 @@
 @mixin sectionHeader {
-color: black;
-  font-size: 24px;
-  width: 650px;
+
+  font-size: 22px;
+  font-family: $font-base;
+  font-weight: 400;
+  color: $color_main_font;
+  padding: 64px 85px 80px 85px;
 }
 
 .WhoDoWeHelpHeader {
@@ -13,15 +16,28 @@ color: black;
     text-align: center;
     font-size: 36px;
     font-family: $font-base;
-    padding-top: 150px;
-    padding-bottom: 70px;
-    color:inherit;
+    padding-top: 83px;
+    padding-bottom: 34px;
+    color: inherit;
   }
 
 }
 
+.donateListDescription {
+  text-align: left;
+
+}
+
+.donateListDonation {
+  float: right;
+
+  p {
+    text-align: right;
+  }
+}
 
 .whoDoWeHelpLinks {
+  padding-top: 50px;
   display: flex;
   justify-content: center;
   flex-direction: row;
@@ -56,10 +72,31 @@ color: black;
 }
 
 .donationOrgList {
+  padding: 30px 88px;
+
+
+  .donateListDescription {
+
+    h1{
+      font-weight: lighter;
+      font-family: $font-alt;
+      font-size: 26px;
+    }
+    p {
+      text-align: left;
+      line-height: 30px;
+
+    }
+  }
+
   p {
-    text-align: left;
+
     color: $color_main_font;
-    font-size: 14px;
+    font-size: 18px;
+
+    font-family: $font-alt;
+    font-weight: lighter;
+    font-style: italic;
   }
 
 }
@@ -73,11 +110,12 @@ color: black;
     display: inline-block;
     margin-right: 10px;
     padding: 5px 10px;
-    color:black;
+    color: black;
     cursor: pointer;
     box-shadow: 0 1px 1px 1px #bbabaa;
-    &:active{
-      background-color:pink;
+
+    &:active {
+      background-color: pink;
     }
 
   }
@@ -85,8 +123,13 @@ color: black;
 
 }
 
-.sectionHeader{
+.sectionHeader {
 
-    @include sectionHeader
+  @include sectionHeader
 
+}
+
+.line{
+border-bottom:1px solid $color_main_font;
+  margin:0 72px;
 }

@@ -1,6 +1,7 @@
 import React from 'react';
 import HomeWhoDoWeHelpWrapper from './whoDoWeHelpWrapper';
 import img from "../../assets/Decoration.svg";
+import {HashRouter} from "react-router-dom";
 
 class HomeWhoDoWeHelp extends React.Component {
     constructor(props) {
@@ -9,6 +10,7 @@ class HomeWhoDoWeHelp extends React.Component {
     }
 
     render() {
+
         return (
             <>
                 <section className={"WhoDoWeHelpHeader"}>
@@ -17,7 +19,9 @@ class HomeWhoDoWeHelp extends React.Component {
 
                 </section>
                 <div id={"homeWhoDoWeHelp"}>
+
                     <HomeWhoDoWeHelpWrapper links={["Fundacjom", "Organizacjom pozarządowym", "Lokalnym zbiórkom"]}/>
+
                 </div>
             </>
 

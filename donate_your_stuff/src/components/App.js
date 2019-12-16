@@ -10,22 +10,26 @@ import {
 } from "react-router-dom";
 import LogIn from "./logInFormSection/logIn";
 import SignUp from "./signUpFormSection/signUp";
+import FundationsSection from "./homeWhoDoWeHelp/fundationSection/fundationsSection";
+import OrganisationsSection from "./homeWhoDoWeHelp/organisationsSection/organisationsSection";
+import LocalDonationCenterSection from "./homeWhoDoWeHelp/localDonationCenterSection/localDonationCenterSection";
 
-class App extends React.Component{
+class App extends React.Component {
     constructor(props) {
         super(props);
-        this.state={
-
-        }
+        this.state = {}
     }
 
     render() {
-        return(
+
+        return (
             <HashRouter>
                 <Switch>
                     <Route path="/logowanie" component={LogIn}/>
                     <Route path="/rejestracja" component={SignUp}/>
                     <Route exact path={"/"} component={Home}/>
+
+
                 </Switch>
             </HashRouter>
         )

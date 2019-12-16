@@ -46,7 +46,7 @@ class HomeHeader extends React.Component {
                             <div className={"mainMenu"}>
 
                                 <ul className={"headerMenu"}>
-                                    <li><Link activeClass="activeLink"
+                                    <li><Link activeClassName="activeLink"
                                               spy={true}
                                               smooth={true}
                                               offset={0}
@@ -55,7 +55,7 @@ class HomeHeader extends React.Component {
                                     </li>
                                     <li>
 
-                                        <Link activeClass="activeLink"
+                                        <Link activeClassName="activeLink"
                                               spy={true}
                                               smooth={true}
                                               offset={0}
@@ -63,7 +63,7 @@ class HomeHeader extends React.Component {
                                               to={'homeIconPath'}>O co chodzi?</Link>
                                     </li>
                                     <li>
-                                        <Link activeClass="activeLink"
+                                        <Link activeClassName="activeLink"
                                               spy={true}
                                               smooth={true}
                                               offset={0}
@@ -71,7 +71,7 @@ class HomeHeader extends React.Component {
                                               to={'homeAboutUs'}>O nas</Link>
                                     </li>
                                     <li>
-                                        <Link activeClass="activeLink"
+                                        <Link activeClassName="activeLink"
                                               spy={true}
                                               smooth={true}
                                               offset={0}
@@ -79,7 +79,7 @@ class HomeHeader extends React.Component {
                                               to={'homeWhoDoWeHelp'}>Fundacja i organizacje</Link>
                                     </li>
                                     <li>
-                                        <Link activeClass="activeLink"
+                                        <Link activeClassName="activeLink"
                                               spy={true}
                                               smooth={true}
                                               offset={0}
