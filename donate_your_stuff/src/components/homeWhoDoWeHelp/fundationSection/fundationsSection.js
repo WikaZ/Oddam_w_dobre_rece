@@ -55,7 +55,7 @@ class FundationsSection extends React.Component {
                 }
 
             ],
-            currentPage: "1",
+            currentPage: 1,
             elPerPage: 3,
 
 
@@ -65,7 +65,7 @@ class FundationsSection extends React.Component {
     handleClickPage=(e, i)=>{
         this.setState({
             currentPage:i
-        })
+        });
         console.log(this.state.currentPage, "currentpage");
     };
     render() {
@@ -77,7 +77,8 @@ class FundationsSection extends React.Component {
 
         const indexOfFirst = indexOfLast - elemPerPage;
         const currentEl = elementsToRender.slice(indexOfFirst, indexOfLast)
-        const elements = currentEl.map((el, i) => {
+        const elements = currentEl.map((el,i) => {
+
             return (
                 <div key={i} className={"donationOrgList"}>
                     <h1> {el.header}</h1>
