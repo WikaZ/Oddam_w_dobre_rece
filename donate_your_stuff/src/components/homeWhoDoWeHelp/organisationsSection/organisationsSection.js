@@ -81,7 +81,8 @@ class OrganisationsSection extends React.Component {
 
         return (
             <>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci aperiam doloribus esse excepturi,
+                <div className={"donationOrgSection"}>
+                <p className={"sectionHeader"}>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci aperiam doloribus esse excepturi,
                     illo iste mollitia nostrum odio quam!</p>
                 <section> {elements}</section>
                 <section>
@@ -89,6 +90,7 @@ class OrganisationsSection extends React.Component {
                         {pageNum}
                     </ul>
                 </section>
+                </div>
             </>
         )
     }

@@ -112,7 +112,7 @@ class FundationsSection extends React.Component {
 
         return (
             <>
-                <p style={{color: "black", fontSize: "24px", width: "650px"}}>W naszej bazie znajdziesz listę
+                <p className={"sectionHeader"}>W naszej bazie znajdziesz listę
                     zweryfikowanych Fundacji, z którymi
                     współpracujemy. Możesz sprawdzić czym się zajmują, komu pomagają i czego potrzebują.</p>
 
