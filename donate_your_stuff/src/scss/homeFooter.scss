@@ -1,0 +1,21 @@
+#homeContactUs{
+  background-image: url("../assets/Background-Contact-Form.jpg");
+}
+.contactForm{
+  display: flex;
+  flex-direction: column;
+  //justify-content: center;
+  //align-items: center;
+.formHeader{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+}
+.formHeader{
+  &>h1{
+    @include mainHeading
+  }
+}

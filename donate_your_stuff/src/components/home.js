@@ -4,8 +4,8 @@ import HomeThreeCol from './homeThreeColSection/homeThreeCol'
 import HomeIconPath from './homeIconPathSection/homeIconPath'
 import HomeAboutUs from './homeAboutUsSection/homeAboutUs'
 import HomeWhoDoWeHelp from './homeWhoDoWeHelp/homeWhoDoWeHelp'
-import HomeContactUs from './homeContactUs'
-import HomeFooter from './homeFooter'
+import HomeContactUs from './homeContactForm/homeContactUs'
+import HomeFooter from './homeContactForm/homeFooter'
 
 class Home extends React.Component {
     constructor(props) {

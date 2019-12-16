@@ -1,4 +1,9 @@
 import React from 'react';
+import Container from "react-bootstrap/Container";
+import Row from "react-bootstrap/Row";
+import Col from "react-bootstrap/Col";
+import  HomeContactForm from './homeContactForm'
+
 
 class HomeFooter extends React.Component{
     constructor(props) {
@@ -10,8 +15,8 @@ class HomeFooter extends React.Component{
 
     render() {
         return(
-            <div id={"homeFooter"} style={{height:"350px", backgroundColor:"navy"}}>
-                <p>Hi, Im homefooter</p>
+            <div id={"homeFooter"}>
+
             </div>
 
         )

@@ -58,7 +58,7 @@ class FundationsSection extends React.Component {
                 }
 
             ],
-            currentPage: 1,
+            currentPage: '',
             elPerPage: 3,
 
 
@@ -97,7 +97,7 @@ class FundationsSection extends React.Component {
                         <Col lg={1} md={1} xs={1}></Col>
                     </Row>
 
-                    <Row key={i}>
+                    <Row>
                         <Col lg={1} md={1} xs={1}></Col>
                         <Col lg={10} md={10} xs={10}>
                             <div className={"line"}>
