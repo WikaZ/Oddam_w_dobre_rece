@@ -79,9 +79,11 @@
       padding: 10px 10px;
       margin: 21px 0 40px 0;
       background-color: transparent;
+     overflow-y: hidden;
 
       &::placeholder {
         color: #EEEEEE;
+        padding:10px 10px;
       }
     }
 

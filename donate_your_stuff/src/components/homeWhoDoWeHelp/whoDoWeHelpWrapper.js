@@ -57,8 +57,8 @@ class WhoDoWeHelpWrapper extends React.Component {
                     </ul>
                 </div>
 
-                {currentLinkIndex === 1 ? <FundationsSection/> :
-                    (currentLinkIndex === 2 ? <OrganisationsSection/> : <LocalDonationCenterSection/>)}
+                {currentLinkIndex === 0 ? <FundationsSection/> :
+                    (currentLinkIndex === 1 ? <OrganisationsSection/> : <LocalDonationCenterSection/>)}
                 {
                 }
 

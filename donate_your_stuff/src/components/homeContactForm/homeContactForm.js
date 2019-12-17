@@ -39,7 +39,7 @@ class HomeContactForm extends React.Component {
                     <Row>
                         <Col id={'formTextarea'} lg={12} md={12}>
                             <textarea name="message" id=""
-                                      placeholder={" Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam eos explicabo inventore officia perspiciatis quia ullam velit. Ad cum magnam pariatur soluta suscipit? Dolorum perspiciatis, quae. Molestiae quia voluptas voluptatibus?"}></textarea>
+                                      placeholder={" Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam eos explicabo inventore officia perspiciatis quia ullam velit. "}></textarea>
                         </Col>
                     </Row>
                     <Row>
