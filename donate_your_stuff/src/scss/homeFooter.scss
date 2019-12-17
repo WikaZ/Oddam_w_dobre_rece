@@ -69,7 +69,7 @@
   #formTextarea {
     //padding-left: 30px;
     //padding-right: 30px;
-
+    margin: 21px 0 40px 0;
 
     textarea {
       width: 100%;
@@ -78,7 +78,7 @@
       border-color: transparent;
       border-bottom-color: #929292;
       padding: 10px 0;
-      margin: 21px 0 40px 0;
+      //margin: 21px 0 40px 0;
       background-color: transparent;
       text-indent: -5px;
      overflow-y: hidden;
@@ -140,4 +140,11 @@
 
 .form {
   padding: 0 100px;
+}
+
+.validateData{
+  color:red;
+  font-size: 12px;
+  text-align: left;
+  padding-top:10px;
 }
