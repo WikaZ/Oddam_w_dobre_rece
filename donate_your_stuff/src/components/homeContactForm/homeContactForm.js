@@ -44,7 +44,7 @@ class HomeContactForm extends React.Component {
                     </Row>
                     <Row>
                         <Col></Col>
-                        <Col lg={2} md={2} xs={12}>
+                        <Col lg={3} md={3} xs={12}>
                         <input type="submit" value={'Wyślij'}/>
                         </Col>
                     </Row>
