@@ -1,5 +1,6 @@
 #homeContactUs {
   background-image: url("../assets/Background-Contact-Form.jpg");
+
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -20,11 +21,11 @@
 
   input[type="text"], input[type="email"] {
     margin-top: 10px;
-    padding: 10px 10px;
+    padding: 10px 0;
     font-size: 18px;
 
     &::placeholder {
-      color: #EEEEEE;
+      color: #d1d1d1;
     }
 
   }
@@ -76,14 +77,15 @@
       resize: none;
       border-color: transparent;
       border-bottom-color: #929292;
-      padding: 10px 10px;
+      padding: 10px 0;
       margin: 21px 0 40px 0;
       background-color: transparent;
+      text-indent: -5px;
      overflow-y: hidden;
 
       &::placeholder {
-        color: #EEEEEE;
-        padding:10px 10px;
+        color: #d1d1d1;
+        padding:10px 0 ;
       }
     }
 
@@ -108,7 +110,7 @@
 }
 
 .contactUsMainForm {
-
+  background-color:  rgba(255,255,255,0.8);
 }
 
 //footer
