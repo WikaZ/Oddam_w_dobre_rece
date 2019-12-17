@@ -10,13 +10,13 @@ class HomeContactForm extends React.Component {
         this.state = {
             email: "",
             name: "",
-            message:"",
+            message: "",
             errors: {
                 errorEmail: "",
                 errorName: "",
                 errorMessage: ""
             },
-            status:false
+            status: false
         }
     }
 
@@ -28,11 +28,20 @@ class HomeContactForm extends React.Component {
         });
         console.log(this.state.name, "name", this.state.email, "email");
     };
+
+    handleChechErrors = (obj) => {
+        Object.values(obj).every((el) => {
+            console.log(el, "el");
+            return !el.length
+
+        });
+
+    }
     handleValidate = (e) => {
         e.preventDefault();
 
         console.log(this.state.errors, "err obj before submit");
-        const {name, email,message, errors} = this.state;
+        const {name, email, message, errors} = this.state;
         console.log('Name: ', name);
         let errorObj = errors;
         const validateEmail = RegExp(/^\S+@\S+\.\S+/g);
@@ -56,33 +65,55 @@ class HomeContactForm extends React.Component {
         } else {
             errorObj.errorEmail = ""
         }
-        if (message.length < 120) {
+        if (message.length < 10) {
             errorObj.errorMessage = "Wiadomość musi mieć co najmniej 120 znaków!"
         }
+
+        function checkErrors() {
+            let errorTab = Object.values(errorObj);
+            console.log(errorTab.length, "err.tab.length");
+            console.log(errorTab);
+            errorTab.every((el) => {
+                return !el.length
+            });
+        }
+
+        if (checkErrors) {
+            this.setState({
+                status: !this.state.status
+            })
+        }
+
         this.setState({
             errors: errorObj,
-            status:true,
-            email: "",
             name: "",
-            message:""
+            email: "",
+            message: ""
+
         });
-        console.log(this.state.errors, "state.errors");
 
-
-
-
-
+        //     this.handleChechErrors(errorObj) ? this.setState({
+        //         status: true
+        //     }) : this.setState({
+        //         status: false
+        //     })
+        //     console.log(this.state.errors, "state.errors");
+        //
+        //
     };
 
     render() {
         let errorName = this.state.errors.errorName;
         let errorEmail = this.state.errors.errorEmail;
-        let errorMessage= this.state.errors.errorMessage;
+        let errorMessage = this.state.errors.errorMessage;
         return (
             <Container className={"contactForm"}>
-                <Row className={'formHeader'}>
+                <Row className={this.state.status === true ? "formHeaderSuccess" : 'formHeader'}>
                     <h1>Skontaktuj się z nami</h1>
                     <img src={img} alt="dekoracja"/>
+                    {this.state.status === true ? <div className={"successMessage"}><p>Wiadomość została wysłana!</p>
+                            <p>Wkrótce sie skontaktujemy.</p></div>
+                        : null}
                 </Row>
 
                 <form action="" className={"form"}>
@@ -110,7 +141,8 @@ class HomeContactForm extends React.Component {
                     <Row>
                         <Col id={'formTextarea'} lg={12} md={12}>
                             <textarea name="message" id=""
-                                      placeholder={" Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam eos explicabo inventore officia perspiciatis quia ullam velit. "} value={this.state.message}
+                                      placeholder={" Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam eos explicabo inventore officia perspiciatis quia ullam velit. "}
+                                      value={this.state.message}
                                       onChange={this.handleGetInfo}></textarea>
                             <p className={"validateData"}>{errorMessage}</p>
                         </Col>

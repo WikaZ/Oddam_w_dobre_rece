@@ -1,3 +1,12 @@
+@mixin formHeader {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 224px;
+}
+
+
 #homeContactUs {
   background-image: url("../assets/Background-Contact-Form.jpg");
 
@@ -34,12 +43,23 @@
   //justify-content: center;
   //align-items: center;
   .formHeader {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    & > h1 {
+      @include mainHeading;
+      padding-top: 0;
+    }
+    @include formHeader;
+
     margin-bottom: 66px;
-    padding-top: 224px
+
+  }
+
+  .formHeaderSuccess {
+    & > h1 {
+      @include mainHeading;
+      padding-top: 0;
+    }
+    @include formHeader;
+    margin-bottom: 66px;
   }
 
   #mainInfo {
@@ -81,11 +101,11 @@
       //margin: 21px 0 40px 0;
       background-color: transparent;
       text-indent: -5px;
-     overflow-y: hidden;
+      overflow-y: hidden;
 
       &::placeholder {
         color: #d1d1d1;
-        padding:10px 0 ;
+        padding: 10px 0;
       }
     }
 
@@ -110,7 +130,7 @@
 }
 
 .contactUsMainForm {
-  background-color:  rgba(255,255,255,0.8);
+  background-color: rgba(255, 255, 255, 0.8);
 }
 
 //footer
@@ -142,9 +162,19 @@
   padding: 0 100px;
 }
 
-.validateData{
-  color:red;
+.validateData {
+  color: red;
   font-size: 12px;
   text-align: left;
-  padding-top:10px;
+  padding-top: 10px;
+}
+
+.successMessage {
+  padding-top: 20px;
+
+  p {
+    font-size: 16px;
+    color: #549f22;
+    font-family: $font-base;
+  }
 }
