@@ -17,10 +17,9 @@
 }
 
 
-.activePage {
-  border: 1px solid greenyellow;
-  background-color: deeppink;
-}
+//.activePage {
+//  border: 1px solid black
+//}
 
 .WhoDoWeHelpHeader {
   display: flex;
@@ -144,10 +143,11 @@
     padding: 20px 15px;
     color: black;
     cursor: pointer;
-
     border: 1px solid transparent;
 
-    &:active {
+    //border: 1px solid transparent;
+
+    &.activePage {
       border: 1px solid black
     }
 

@@ -92,7 +92,7 @@ class OrganisationsSection extends React.Component {
         for (let i = 1; i <= Math.ceil(elementsToRender.length / elPerPage); i++) {
 
 
-            const pageLink = <li key={i} onClick={(e) => {
+            const pageLink = <li key={i} className={this.state.currentPage === i ? "activePage" : ""} onClick={(e) => {
                 this.handleClickPage(e, i)
             }}>{i}</li>
             pageNum.push(pageLink)
