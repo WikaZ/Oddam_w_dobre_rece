@@ -65,6 +65,10 @@
       border: 1px solid #CECECE;
     }
 
+    &.active{
+      border: 1px solid #C2C2C2;
+    }
+
     &:last-child {
       margin-right: 0;
     }
@@ -92,10 +96,10 @@
 
   }
 
-  li .active {
-    border: 1px solid $color_main_font;
-    background-color: greenyellow;
-  }
+  //li .active {
+  //  border: 1px solid $color_main_font;
+  //  background-color: greenyellow;
+  //}
 
 }
 
@@ -148,7 +152,7 @@
     //border: 1px solid transparent;
 
     &.activePage {
-      border: 1px solid black
+      border: 1px solid #C0C0C0;
     }
 
 
