@@ -28,16 +28,22 @@ class HomeContactForm extends React.Component {
         });
         console.log(this.state.name, "name", this.state.email, "email");
     };
+   postData=()=>{
 
 
-    checkErrors = (obj) => {
-        let errorTab = Object.values(obj);
-        console.log(errorTab);
-        errorTab.every((el) => {
-                return (el === "")
-            }
-        )
+        let name = this.state.name
+        let email = this.state.email;
+        let message=this.state.message;
+
+        fetch('https://fer-api.coderslab.pl/v1/portfolio/contact', {
+            method: 'POST',
+            headers : {"Content-Type": "application/json"},
+            body:JSON.stringify({name:name, email:email,message:message})
+        }).then((res) => res.json())
+            .then((data) =>  console.log(data))
+            .catch((err)=>console.log(err))
     }
+
 
     handleValidate = (e) => {
         e.preventDefault();
@@ -47,7 +53,7 @@ class HomeContactForm extends React.Component {
         console.log('Name: ', name);
         let errorObj = errors;
         const validateEmail = RegExp(/^\S+@\S+\.\S+/g);
-        const validateName = RegExp(/[a-zA-Z]+/i);
+        const validateName = RegExp(/^\S+$/);
 
         console.log("errName");
         if (!name.length) {
@@ -67,7 +73,7 @@ class HomeContactForm extends React.Component {
         } else {
             errorObj.errorEmail = ""
         }
-        if (message.length < 2) {
+        if (message.length < 120) {
             errorObj.errorMessage = "Wiadomość musi mieć co najmniej 120 znaków!"
         } else {
             errorObj.errorMessage = ""
@@ -87,21 +93,47 @@ class HomeContactForm extends React.Component {
             this.setState({
                 status: true
             })
+            this.postData();
+
         } else {
             this.setState({
                 status: false
             })
         }
-
-        // this.checkErrors(this.state.errors) ? this.setState({
-        //     status: true
-        // }) : this.setState({
-        //     status: false
-        // })
-        // console.log(this.state.errors, "state.errors");
+       };
 
 
-    };
+   // functionSendData() {
+   //      const url = `https://fer-api.coderslab.pl/v1/portfolio/contact`
+   //      fetch(url, {
+   //          method: 'post',
+   //          body: {
+   //              name: this.state.name,
+   //              email:this.state.email,
+   //              message:this.state.message
+   //          },
+   //          "Content-Type": "application/json"
+   //      })
+   //          .then((res) => res.json())
+   //          .then((res) => {
+   //              console.log(res);
+   //
+   //          })
+   //          .catch((err) => {
+   //              console.log(err);
+   //          })
+   //  }
+    // function createGist(opts) {
+    //     ChromeSamples.log('Posting request to GitHub API...');
+    //     fetch('https://api.github.com/gists', {
+    //         method: 'post',
+    //         body: JSON.stringify(opts)
+    //     }).then(function(response) {
+    //         return response.json();
+    //     }).then(function(data) {
+    //         ChromeSamples.log('Created Gist:', data.html_url);
+    //     });
+    // }
 
     render() {
         let errorName = this.state.errors.errorName;
