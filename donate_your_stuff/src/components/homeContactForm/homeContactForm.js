@@ -24,7 +24,7 @@ class HomeContactForm extends React.Component {
         e.preventDefault();
 
         this.setState({
-            [e.target.name]: e.currentTarget.value
+            [e.target.name]: e.currentTarget.value.trim()
         });
         console.log(this.state.name, "name", this.state.email, "email");
     };
@@ -40,7 +40,7 @@ class HomeContactForm extends React.Component {
             headers : {"Content-Type": "application/json"},
             body:JSON.stringify({name:name, email:email,message:message})
         }).then((res) => res.json())
-            .then((data) =>  console.log(data))
+            .then((data) =>  console.log(data, "moje dane"))
             .catch((err)=>console.log(err))
     }
 
@@ -53,13 +53,14 @@ class HomeContactForm extends React.Component {
         console.log('Name: ', name);
         let errorObj = errors;
         const validateEmail = RegExp(/^\S+@\S+\.\S+/g);
-        const validateName = RegExp(/^\S+$/);
+        const validateName = RegExp(/^\S+$/i);
 
-        console.log("errName");
+
         if (!name.length) {
-            errorObj.errorName = "Podane imię jest nieprawidłowe"
+            errorObj.errorName = "Podane imię jest nieprawidłowe";
+            console.log("name nie jest wpisane");
         } else if (!validateName.test(name)) {
-            console.log("zle wpisane imie");
+            console.log("zle wpisane imie", name);
             errorObj.errorName = "Podane imię jest nieprawidłowe"
         } else {
             errorObj.errorName = ""
@@ -103,37 +104,7 @@ class HomeContactForm extends React.Component {
        };
 
 
-   // functionSendData() {
-   //      const url = `https://fer-api.coderslab.pl/v1/portfolio/contact`
-   //      fetch(url, {
-   //          method: 'post',
-   //          body: {
-   //              name: this.state.name,
-   //              email:this.state.email,
-   //              message:this.state.message
-   //          },
-   //          "Content-Type": "application/json"
-   //      })
-   //          .then((res) => res.json())
-   //          .then((res) => {
-   //              console.log(res);
-   //
-   //          })
-   //          .catch((err) => {
-   //              console.log(err);
-   //          })
-   //  }
-    // function createGist(opts) {
-    //     ChromeSamples.log('Posting request to GitHub API...');
-    //     fetch('https://api.github.com/gists', {
-    //         method: 'post',
-    //         body: JSON.stringify(opts)
-    //     }).then(function(response) {
-    //         return response.json();
-    //     }).then(function(data) {
-    //         ChromeSamples.log('Created Gist:', data.html_url);
-    //     });
-    // }
+
 
     render() {
         let errorName = this.state.errors.errorName;
