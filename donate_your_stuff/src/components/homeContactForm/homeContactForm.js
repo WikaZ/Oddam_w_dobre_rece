@@ -29,14 +29,16 @@ class HomeContactForm extends React.Component {
         console.log(this.state.name, "name", this.state.email, "email");
     };
 
-    handleChechErrors = (obj) => {
-        Object.values(obj).every((el) => {
-            console.log(el, "el");
-            return !el.length
 
-        });
-
+    checkErrors = (obj) => {
+        let errorTab = Object.values(obj);
+        console.log(errorTab);
+        errorTab.every((el) => {
+                return (el === "")
+            }
+        )
     }
+
     handleValidate = (e) => {
         e.preventDefault();
 
@@ -65,24 +67,14 @@ class HomeContactForm extends React.Component {
         } else {
             errorObj.errorEmail = ""
         }
-        if (message.length < 10) {
+        if (message.length < 2) {
             errorObj.errorMessage = "Wiadomość musi mieć co najmniej 120 znaków!"
+        } else {
+            errorObj.errorMessage = ""
         }
 
-        function checkErrors() {
-            let errorTab = Object.values(errorObj);
-            console.log(errorTab.length, "err.tab.length");
-            console.log(errorTab);
-            errorTab.every((el) => {
-                return !el.length
-            });
-        }
+        // this.checkErrors(errorObj);
 
-        if (checkErrors) {
-            this.setState({
-                status: !this.state.status
-            })
-        }
 
         this.setState({
             errors: errorObj,
@@ -91,15 +83,24 @@ class HomeContactForm extends React.Component {
             message: ""
 
         });
+        if (this.state.errors.errorMessage === "" && this.state.errors.errorEmail === "" && this.state.errors.errorName === "") {
+            this.setState({
+                status: true
+            })
+        } else {
+            this.setState({
+                status: false
+            })
+        }
 
-        //     this.handleChechErrors(errorObj) ? this.setState({
-        //         status: true
-        //     }) : this.setState({
-        //         status: false
-        //     })
-        //     console.log(this.state.errors, "state.errors");
-        //
-        //
+        // this.checkErrors(this.state.errors) ? this.setState({
+        //     status: true
+        // }) : this.setState({
+        //     status: false
+        // })
+        // console.log(this.state.errors, "state.errors");
+
+
     };
 
     render() {
