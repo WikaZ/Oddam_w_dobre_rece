@@ -14,6 +14,8 @@ import FundationsSection from "./homeWhoDoWeHelp/fundationSection/fundationsSect
 import OrganisationsSection from "./homeWhoDoWeHelp/organisationsSection/organisationsSection";
 import LocalDonationCenterSection from "./homeWhoDoWeHelp/localDonationCenterSection/localDonationCenterSection";
 
+import Navigation from "./navigation/navigation"
+
 class App extends React.Component {
     constructor(props) {
         super(props);
@@ -23,15 +25,21 @@ class App extends React.Component {
     render() {
 
         return (
-            <HashRouter>
-                <Switch>
-                    <Route path="/logowanie" component={LogIn}/>
-                    <Route path="/rejestracja" component={SignUp}/>
-                    <Route exact path={"/"} component={Home}/>
+            <>
+
+                <HashRouter>
+                    <>
+                        <Navigation/>
+                        <Switch>
+                            <Route path="/logowanie" component={LogIn}/>
+                            <Route path="/rejestracja" component={SignUp}/>
+                            <Route exact path={"/"} component={Home}/>
 
 
-                </Switch>
-            </HashRouter>
+                        </Switch>
+                    </>
+                </HashRouter>
+            </>
         )
     }
 }

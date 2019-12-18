@@ -33,66 +33,66 @@ class HomeHeader extends React.Component {
         return (
             <div className={"header"}>
                 <Container fluid className={"containerStyle"}>
-                    <Row>
-                        <Col>
-                            <div className={"MainUpperMenuBar"}>
-                                <MainUpperMenuBar/>
-                            </div>
+                    {/*<Row>*/}
+                    {/*    <Col>*/}
+                    {/*        <div className={"MainUpperMenuBar"}>*/}
+                    {/*            <MainUpperMenuBar/>*/}
+                    {/*        </div>*/}
 
-                        </Col>
-                    </Row>
-                    <Row>
-                        <Col>
-                            <div className={"mainMenu"}>
+                    {/*    </Col>*/}
+                    {/*</Row>*/}
+                    {/*<Row>*/}
+                    {/*    <Col>*/}
+                    {/*        <div className={"mainMenu"}>*/}
 
-                                <ul className={"headerMenu"}>
-                                    <li><Link activeClassName="activeLink"
-                                              spy={true}
-                                              smooth={true}
-                                              offset={0}
-                                              duration={500}
-                                              to={"header"}>Start</Link>
-                                    </li>
-                                    <li>
+                    {/*            <ul className={"headerMenu"}>*/}
+                    {/*                <li><Link activeClassName="activeLink"*/}
+                    {/*                          spy={true}*/}
+                    {/*                          smooth={true}*/}
+                    {/*                          offset={0}*/}
+                    {/*                          duration={500}*/}
+                    {/*                          to={"header"}>Start</Link>*/}
+                    {/*                </li>*/}
+                    {/*                <li>*/}
 
-                                        <Link activeClassName="activeLink"
-                                              spy={true}
-                                              smooth={true}
-                                              offset={0}
-                                              duration={500}
-                                              to={'homeIconPath'}>O co chodzi?</Link>
-                                    </li>
-                                    <li>
-                                        <Link activeClassName="activeLink"
-                                              spy={true}
-                                              smooth={true}
-                                              offset={0}
-                                              duration={500}
-                                              to={'homeAboutUs'}>O nas</Link>
-                                    </li>
-                                    <li>
-                                        <Link activeClassName="activeLink"
-                                              spy={true}
-                                              smooth={true}
-                                              offset={0}
-                                              duration={500}
-                                              to={'homeWhoDoWeHelp'}>Fundacja i organizacje</Link>
-                                    </li>
-                                    <li>
-                                        <Link activeClassName="activeLink"
-                                              spy={true}
-                                              smooth={true}
-                                              offset={0}
-                                              duration={500}
-                                              to={'homeContactUs'}>Kontakt</Link>
-                                    </li>
-                                </ul>
+                    {/*                    <Link activeClassName="activeLink"*/}
+                    {/*                          spy={true}*/}
+                    {/*                          smooth={true}*/}
+                    {/*                          offset={0}*/}
+                    {/*                          duration={500}*/}
+                    {/*                          to={'homeIconPath'}>O co chodzi?</Link>*/}
+                    {/*                </li>*/}
+                    {/*                <li>*/}
+                    {/*                    <Link activeClassName="activeLink"*/}
+                    {/*                          spy={true}*/}
+                    {/*                          smooth={true}*/}
+                    {/*                          offset={0}*/}
+                    {/*                          duration={500}*/}
+                    {/*                          to={'homeAboutUs'}>O nas</Link>*/}
+                    {/*                </li>*/}
+                    {/*                <li>*/}
+                    {/*                    <Link activeClassName="activeLink"*/}
+                    {/*                          spy={true}*/}
+                    {/*                          smooth={true}*/}
+                    {/*                          offset={0}*/}
+                    {/*                          duration={500}*/}
+                    {/*                          to={'homeWhoDoWeHelp'}>Fundacja i organizacje</Link>*/}
+                    {/*                </li>*/}
+                    {/*                <li>*/}
+                    {/*                    <Link activeClassName="activeLink"*/}
+                    {/*                          spy={true}*/}
+                    {/*                          smooth={true}*/}
+                    {/*                          offset={0}*/}
+                    {/*                          duration={500}*/}
+                    {/*                          to={'homeContactUs'}>Kontakt</Link>*/}
+                    {/*                </li>*/}
+                    {/*            </ul>*/}
 
-                            </div>
-                        </Col>
+                    {/*        </div>*/}
+                    {/*    </Col>*/}
 
 
-                    </Row>
+                    {/*</Row>*/}
                     <Row>
                         <Col lg={5} md={5} xs={12} className={"resetPaddings"}></Col>
                         <Col lg={1} md={1}></Col>

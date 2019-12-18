@@ -42,13 +42,11 @@ class HomeContactForm extends React.Component {
         }).then((res) => res.json())
             .then((data) =>  console.log(data, "moje dane"))
             .catch((err)=>console.log(err))
-    }
+    };
 
 
     handleValidate = (e) => {
         e.preventDefault();
-
-        console.log(this.state.errors, "err obj before submit");
         const {name, email, message, errors} = this.state;
         console.log('Name: ', name);
         let errorObj = errors;
@@ -93,7 +91,7 @@ class HomeContactForm extends React.Component {
         if (this.state.errors.errorMessage === "" && this.state.errors.errorEmail === "" && this.state.errors.errorName === "") {
             this.setState({
                 status: true
-            })
+            });
             this.postData();
 
         } else {
