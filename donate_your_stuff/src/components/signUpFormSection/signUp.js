@@ -8,10 +8,81 @@ import {Link} from "react-router-dom";
 class SignUp extends React.Component {
     constructor(props) {
         super(props);
-        this.state = {}
+        this.state = {
+            email:"",
+            pass:"",
+            repeatPass:"",
+            errors: {
+                errorEmail: "",
+                errorPass: "",
+                errorRepeatPass: "",
+
+            },
+            status: false
+        }
     }
 
+    handleGetInfo=(e)=>{
+        e.preventDefault();
+
+        this.setState({
+            [e.target.name]: e.currentTarget.value
+        });
+        console.log(this.state.email, "email", this.state.pass, "pass", this.state.repeatPass, "repPass");
+    };
+
+    handleValidate = (e) => {
+        e.preventDefault();
+        const {pass, email , repeatPass, errors} = this.state;
+        console.log('pass: ', pass, "repeatPass:" ,repeatPass);
+        let errorObj = errors;
+        const validateEmail = RegExp(/^\S+@\S+\.\S+/g);
+        if (!email.length) {
+            errorObj.errorEmail = "Podany email jest nieprawidłowy!"
+        } else if (!validateEmail.test(email)) {
+            console.log("zle wpisane email");
+            errorObj.errorEmail = "Podany email jest nieprawidłowy!"
+        } else {
+            errorObj.errorEmail = ""
+        }
+        if (pass.length < 6) {
+            errorObj.errorPass = "Podane hasło jest za krótkie!"
+        } else {
+            errorObj.errorPass = ""
+        }
+
+       if( pass === repeatPass){
+            errorObj.errorRepeatPass = "";
+           console.log("jest ok");
+        } else{
+            errorObj.errorRepeatPass = "Podane hasło jest niepoprawne!";
+            console.log(" nie jest ok");
+        }
+
+        this.setState({
+            errors: errorObj,
+            pass: "",
+            email: "",
+            repeatPass:""
+
+        });
+
+        if (this.state.errors.errorPass === "" && this.state.errors.errorEmail === "" && this.state.errors.errorRepeatPass === "") {
+            this.setState({
+                status: true
+            });
+
+
+        } else {
+            this.setState({
+                status: false
+            })
+        }
+    };
     render() {
+        let errorPass = this.state.errors.errorPass;
+        let errorRepeatPass = this.state.errors.errorRepeatPass;
+        let errorEmail = this.state.errors.errorEmail;
         return (
             <Container>
                 <Row className={"logInHeader"}>
@@ -29,11 +100,17 @@ class SignUp extends React.Component {
                         <div className={"alignLoginForm"}>
 
                             <label>Email</label>
-                            <input type="text"/>
+                            <input type="email" value={this.state.email} name={"email"}
+                                   onChange={this.handleGetInfo}/>
+                            <p className={"validateData"}> {errorEmail}</p>
                             <label className={"logInPassLabel"}>Hasło</label>
-                            <input type="email"/>
+                            <input type="password" value={this.state.pass} name={"pass"}
+                                   onChange={this.handleGetInfo}/>
+                            <p className={"validateData"}> {errorPass}</p>
                             <label className={"logInPassLabel"}>Powtórz hasło</label>
-                            <input type="password"/>
+                            <input type="password" value={this.state.repeatPass} name={"repeatPass"}
+                                   onChange={this.handleGetInfo}/>
+                            <p className={"validateData"}> {errorRepeatPass}</p>
 
 
                         </div>
@@ -45,7 +122,7 @@ class SignUp extends React.Component {
                     <Col lg={6} md={6} xs={6}>
                         <div className={"inputFormBtn"}>
                             <button className={"logInBtn"}><Link to="/logowanie">Zaloguj się</Link></button>
-                            <input type="submit" value={"Zalóż konto"} className={"logInBtn"}/>
+                            <input type="submit" value={"Zalóż konto"} className={"logInBtn"} onClick={this.handleValidate}/>
                         </div>
                     </Col>
                     <Col lg={3} md={3} xs={3}></Col>
