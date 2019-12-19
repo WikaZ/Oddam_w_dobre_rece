@@ -12,6 +12,7 @@
 
   .iconPathHeaderText {
     padding-bottom: 23px;
+    @include sectionHeading;
       }
 
   img {

@@ -45,6 +45,7 @@
   .formHeader {
     & > h1 {
       @include mainHeading;
+      @include sectionHeading;
       padding-top: 0;
     }
     @include formHeader;
@@ -150,7 +151,8 @@
 #homeFooter {
 
   p {
-    font-size: 16px;
+    font-size: 17px;
+    font-weight: 400;
     color: inherit;
   }
 }

@@ -36,6 +36,7 @@
   h1 {
     text-align: center;
     padding-bottom: 38px;
+    @include sectionHeading;
   }
 
   img {
@@ -57,6 +58,7 @@ display: inline-block;
 
   & > p {
     font-size: 30px;
+    font-family: $font-alt;
     color: $color_main_font;
     text-align: center;
     letter-spacing: -1px;

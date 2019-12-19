@@ -1,6 +1,17 @@
 @mixin containerHome {
   margin: 0 140px;
   float: right;
+  font-family: $font-alt;
+}
+
+@mixin sectionHeading{
+  font-size: 36px;
+  letter-spacing: -1px;
+
+  //line-height: 55px;
+  color: #3c3c3c;
+  font-family: $font-alt;
+  font-weight: 300;
 }
 
 body {
@@ -48,18 +59,21 @@ p {
     text-decoration: none;
     cursor: pointer;
     border: 1px solid transparent;
+    font-style: $font-alt;
+
 
     &:first-child {
       margin-right: 19px;
     }
 
     &:last-child {
-      margin-right: 11px;
+      margin-right: 20px;
     }
 
     a {
       text-decoration: none;
       color: $color_main_font;
+
     }
   }
 
@@ -92,10 +106,10 @@ p {
 
   li {
     font-size: 18px;
-    font-family: $font-base;
+    font-family: $font-alt;
     font-weight: 400;
     display: inline-block;
-    margin-right: 20px;
+    margin-right: 18px;
     padding: 12px 20px 12px 20px;
     border: 1px solid transparent;
 
@@ -114,6 +128,7 @@ p {
 
     a {
       text-decoration: none;
+
       color: $color_main_font;
     }
 
@@ -131,7 +146,7 @@ p {
 
 .containerStyle {
   margin: 0;
-  padding:0;
+  padding: 0;
 
 }
 
@@ -161,13 +176,7 @@ p {
   }
 
   h1 {
-    font-size: 38px;
-    letter-spacing: -1px;
-
-    //line-height: 55px;
-    color: #3c3c3c;
-    font-family: $font-base;
-    font-weight: 400;
+@include sectionHeading;
     text-align: center;
 
     &:first-child {
@@ -185,7 +194,7 @@ p {
 .homeCallToAction {
   margin-top: 64px;
   margin-bottom: 192px;
-  margin-left:22px
+  margin-left: 22px
 }
 
 
@@ -222,13 +231,18 @@ p {
 .callToAction {
 
   span {
-    color: $color_main_font;
     font-size: 36px;
+    letter-spacing: -1px;
+
+    //line-height: 55px;
+
+    font-family: $font-base;
+    color: $color_main_font;
+
     line-height: 45px;
     margin-bottom: 0;
-    font-family: $font-base;
-    font-weight: lighter;
     text-align: center;
+    font-weight: lighter;
 
     &:first-child {
       //padding-bottom: 10px;
@@ -300,6 +314,6 @@ p {
   padding: 0;
 }
 
-.alignContent{
+.alignContent {
   text-align: center;
 }
