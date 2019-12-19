@@ -34,45 +34,45 @@ export default class Navigation extends React.Component {
                         <div className={"mainMenu"}>
 
                             <ul className={"headerMenu"}>
-                                <li><RouterLink activeClassName="activeLink"
-                                          spy={true}
-                                          smooth={true}
-                                          offset={0}
-                                          duration={500}
-                                          to={"header"}>Start</RouterLink>
+                                <li><RouterLink activeClass="activeLink"
+                                                spy={true}
+                                                smooth={true}
+                                                offset={0}
+                                                duration={500}
+                                                to={"header"}>Start</RouterLink>
                                 </li>
                                 <li>
 
-                                    <RouterLink activeClassName="activeLink"
-                                          spy={true}
-                                          smooth={true}
-                                          offset={0}
-                                          duration={500}
-                                          to={'homeIconPath'}>O co chodzi?</RouterLink>
+                                    <RouterLink activeClass="activeLink"
+                                                spy={true}
+                                                smooth={true}
+                                                offset={0}
+                                                duration={500}
+                                                to={'homeIconPath'}>O co chodzi?</RouterLink>
                                 </li>
                                 <li>
-                                    <RouterLink activeClassName="activeLink"
-                                          spy={true}
-                                          smooth={true}
-                                          offset={0}
-                                          duration={500}
-                                          to={'homeAboutUs'}>O nas</RouterLink>
+                                    <RouterLink activeClass="activeLink"
+                                                spy={true}
+                                                smooth={true}
+                                                offset={0}
+                                                duration={500}
+                                                to={'homeAboutUs'}>O nas</RouterLink>
                                 </li>
                                 <li>
-                                    <RouterLink activeClassName="activeLink"
-                                          spy={true}
-                                          smooth={true}
-                                          offset={0}
-                                          duration={500}
-                                          to={'homeWhoDoWeHelp'}>Fundacja i organizacje</RouterLink>
+                                    <RouterLink activeClass="activeLink"
+                                                spy={true}
+                                                smooth={true}
+                                                offset={0}
+                                                duration={500}
+                                                to={'homeWhoDoWeHelp'}>Fundacja i organizacje</RouterLink>
                                 </li>
                                 <li>
-                                    <RouterLink activeClassName="activeLink"
-                                          spy={true}
-                                          smooth={true}
-                                          offset={0}
-                                          duration={500}
-                                          to={'homeContactUs'}>Kontakt</RouterLink>
+                                    <RouterLink activeClass="activeLink"
+                                                spy={true}
+                                                smooth={true}
+                                                offset={0}
+                                                duration={500}
+                                                to={'homeContactUs'}>Kontakt</RouterLink>
                                 </li>
                             </ul>
 

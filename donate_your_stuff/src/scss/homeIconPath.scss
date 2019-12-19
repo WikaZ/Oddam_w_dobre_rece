@@ -67,7 +67,8 @@ div.stepWrapper{
  }
 
 .step {
-  padding: 72px 50px 64px 50px;
+
+  padding:72px 70px 64px 70px;
 
   text-align: center;
   display: flex;
@@ -79,17 +80,27 @@ div.stepWrapper{
     padding-bottom: 23px;
     padding-top: 18px;
 
-    &#thirdStep {
-      padding-top: 10px;
+
+  }
+  #thirdStep {
+    padding-top: 10px;
+    font-size: 18px;
+    display: block;
+    color:#3C3C3C;
+    &>span{
+      color:inherit;
     }
   }
+
 
   p {
     color: #959695;
     font-size: 16px;
     padding-top: 10px;
-    &#newLineParagraph{
+
+    #newLineParagraph{
       padding-top:1px;
+      display: block;
     }
   }
 
@@ -113,4 +124,10 @@ div.col {
 .center{
  display: flex;
   justify-content: center;
+}
+
+.alignSteps{
+  display: flex;
+  flex-direction: row;
+  justify-content:space-between ;
 }

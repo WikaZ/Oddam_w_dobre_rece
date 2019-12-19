@@ -44,7 +44,7 @@ class LocalDonationCenterSection extends React.Component {
         const elements = currentEl.map((el, i) => {
             return (
                 <>
-                    <Row key={i} className={"donationOrgList"}>
+                    <Row key={ "elemRowLocalCenter" + i} className={"donationOrgList"}>
                         <Col lg={1} md={1} xs={1}></Col>
                         <Col lg={6} md={6} xs={6} className={'donateListDescription'}>
                             <h1> {el.header}</h1>
@@ -56,7 +56,7 @@ class LocalDonationCenterSection extends React.Component {
                         <Col lg={1} md={1} xs={1}></Col>
                     </Row>
                     {currentEl.length - 1 > i ?
-                        <Row key={i}>
+                        <Row key={"elemRowSepLocalCenter"+ i}>
                             <Col lg={1} md={1} xs={1}></Col>
                             <Col lg={10} md={10} xs={10}>
                                 <div className={"line"}>
@@ -73,7 +73,7 @@ class LocalDonationCenterSection extends React.Component {
         for (let i = 1; i <= Math.ceil(elementsToRender.length / elPerPage); i++) {
 
 
-            const pageLink = <li key={i} className={this.state.currentPage === i ? "activePage" : ""} onClick={(e) => {
+            const pageLink = <li key={"linkPageLocalCenter" + i} className={this.state.currentPage === i ? "activePage" : ""} onClick={(e) => {
                 this.handleClickPage(e, i)
             }}>{i}</li>
             pageNum.push(pageLink)

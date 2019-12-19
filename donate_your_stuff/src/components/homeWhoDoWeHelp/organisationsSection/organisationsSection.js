@@ -61,7 +61,7 @@ class OrganisationsSection extends React.Component {
         const elements = currentEl.map((el, i) => {
             return (
                 <>
-                    <Row key={i} className={"donationOrgList"}>
+                    <Row key={"elemRow" + i} className={"donationOrgList"}>
                         <Col lg={1} md={1} xs={1}></Col>
                         <Col lg={6} md={6} xs={6} className={'donateListDescription'}>
                             <h1> {el.header}</h1>
@@ -73,7 +73,7 @@ class OrganisationsSection extends React.Component {
                         <Col lg={1} md={1} xs={1}></Col>
                     </Row>
                     {currentEl.length - 1 > i ?
-                        <Row key={i}>
+                        <Row key={"elemRowSeparator" + i}>
                             <Col lg={1} md={1} xs={1}></Col>
                             <Col lg={10} md={10} xs={10}>
                                 <div className={"line"}>
@@ -92,9 +92,10 @@ class OrganisationsSection extends React.Component {
         for (let i = 1; i <= Math.ceil(elementsToRender.length / elPerPage); i++) {
 
 
-            const pageLink = <li key={i} className={this.state.currentPage === i ? "activePage" : ""} onClick={(e) => {
-                this.handleClickPage(e, i)
-            }}>{i}</li>
+            const pageLink = <li key={"pageLink" + i} className={this.state.currentPage === i ? "activePage" : ""}
+                                 onClick={(e) => {
+                                     this.handleClickPage(e, i)
+                                 }}>{i}</li>
             pageNum.push(pageLink)
 
 
@@ -103,31 +104,20 @@ class OrganisationsSection extends React.Component {
 
         return (
             <>
-                {/*<div className={"donationOrgSection"}>*/}
-                {/*<p className={"sectionHeader"}>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci aperiam doloribus esse excepturi,*/}
-                {/*    illo iste mollitia nostrum odio quam!</p>*/}
-                {/*<section> {elements}</section>*/}
-                {/*<section>*/}
-                {/*    <ul className={"pages"}>*/}
-                {/*        {pageNum}*/}
-                {/*    </ul>*/}
-                {/*</section>*/}
-                {/*</div>*/}
 
                 <Container fluid>
                     <Row>
                         <Col lg={3} md={3}>
                         </Col>
                         <Col lg={6} md={6} xs={6}>
-                            <p className={"sectionHeader"}>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci aperiam doloribus esse excepturi,
+                            <p className={"sectionHeader"}>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                Adipisci aperiam doloribus esse excepturi,
                                 illo iste mollitia nostrum odio quam.</p>
                         </Col>
                         <Col lg={3} md={3}>
                         </Col>
                     </Row>
-                    {/*<Row>*/}
 
-                    {/*<Col lg={12} md={12} xs={12}>*/}
                     <section>
 
                         {elements}

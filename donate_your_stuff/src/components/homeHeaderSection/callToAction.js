@@ -22,18 +22,22 @@ class CallToAction extends React.Component {
         return (
             <HashRouter>
                 <>
-                   <div className={"btnWrapper"}>
+                    <div className={"btnWrapper"}>
 
-                                <Link to="/logowanie" className={"callToAction"}>
-                                    {/*<h1>ODDAJ <span >RZECZY</span></h1>*/}
-                                    <BtnCallToAction>
-                                        <span>ODDAJ <span>RZECZY</span></span>
-                                    </BtnCallToAction>
-                                </Link>
+                        {/*<Link to="/logowanie" className={"callToAction"}>*/}
+                        {/*<h1>ODDAJ <span >RZECZY</span></h1>*/}
+                        <div className={"callToAction"}>
+                            <BtnCallToAction>
+                                <span>ODDAJ <span>RZECZY</span></span>
+                            </BtnCallToAction>
+                        </div>
+                        {/*</Link>*/}
 
-                                <Link to="/logowanie" className={"callToAction"}>
-                                    <BtnSignUp/>
-                                </Link>
+                        {/*<Link to="/logowanie" className={"callToAction"}>*/}
+                        <div className={"callToAction"}>
+                            <BtnSignUp/>
+                        </div>
+                        {/*</Link>*/}
 
 
                     </div>

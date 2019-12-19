@@ -18,74 +18,68 @@ class HomeIconPathSteps extends React.Component {
     render() {
         return (
             <>
-                <Container className={"stepWrapper"}>
+                <Container fluid className={"stepWrapper"}>
 
                     <Row>
-
+                        <Col lg={2} md={2} xs={2}></Col>
                         <Col>
+                            <div className={"alignSteps"}>
+                                <Step/>
+                                <div className={"step"}>
+                                    <div>
+                                        <img src={icon_1}/>
+                                    </div>
 
-                            <Step/>
-                            <div className={"step"}>
-                                <div>
-                                    <img src={icon_1}/>
+                                    <span>Wybierz rzeczy</span>
+                                    <img src={line}/>
+                                    <p>ubrania, zabawki,<span id={"newLineParagraph"}>sprzęt i inne</span></p>
+
                                 </div>
+                                <Step/>
 
-                                <span>Wybierz rzeczy</span>
-                                <img src={line}/>
-                                <p>ubrania, zabawki, sprzęt i inne</p>
 
+                                <Step/>
+                                <div className={"step"}>
+                                    <div>
+                                        <img src={icon_2}/>
+                                    </div>
+                                    <span>Spakuj je</span>
+                                    <img src={line}/>
+                                    <p>skorzystaj z <span id={"newLineParagraph"}>worków na śmieci</span></p>
+
+                                </div>
+                                <Step/>
+
+
+                                <Step/>
+                                <div className={"step"}>
+                                    <div>
+                                        <img src={icon_3}/>
+                                    </div>
+                                    <p id={"thirdStep"}>Zdecyduj komu<span
+                                        id={"newLineParagraph"}> chcesz pomóc</span></p>
+                                    <img src={line}/>
+                                    <p>wybierz zaufane <span id={"newLineParagraph"}>miejsce</span></p>
+                                </div>
+                                <Step/>
+
+
+                                <Step/>
+                                <div className={"step"}>
+                                    <div>
+                                        <img src={icon_4}/>
+                                    </div>
+                                    <span>Zamów kuriera</span>
+                                    <img src={line}/>
+                                    <p>kurier przyjedzie <span id={"newLineParagraph"}>w dogodnym terminie</span></p>
+
+                                </div>
+                                <Step/>
                             </div>
-                            <Step/>
 
                         </Col>
 
-                        <Col>
-
-                            <Step/>
-                            <div className={"step"}>
-                                <div>
-                                    <img src={icon_2}/>
-                                </div>
-                                <span>Spakuj je</span>
-                                <img src={line}/>
-                                <p>skorzystaj z <p id={"newLineParagraph"}>worków na śmieci</p></p>
-
-                            </div>
-                            <Step/>
-
-                        </Col>
-
-                        <Col>
-
-                            <Step/>
-                            <div className={"step"}>
-                                <div>
-                                    <img src={icon_3}/>
-                                </div>
-                                <span id={"thirdStep"}>Zdecyduj komu chcesz pomóc</span>
-                                <img src={line}/>
-                                <p>wybierz zaufane <span>miejsce</span></p>
-                            </div>
-                            <Step/>
-
-                        </Col>
-
-                        <Col>
-
-                            <Step/>
-                            <div className={"step"}>
-                                <div>
-                                    <img src={icon_4}/>
-                                </div>
-                                <span>Zamów kuriera</span>
-                                <img src={line}/>
-                                <p>kurier przyjedzie <p id={"newLineParagraph"}>w dogodnym terminie</p></p>
-
-                            </div>
-                            <Step/>
-
-                        </Col>
-
+                        <Col lg={2} md={2} xs={2}></Col>
 
                     </Row>
 
