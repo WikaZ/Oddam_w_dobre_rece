@@ -1,0 +1,16 @@
+#newLine {
+  display: block;
+  padding-top: 15px;
+}
+
+.alignLogOutContent {
+  display: flex;
+  flex-direction: column;
+
+  .homeLinkBtn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 34px;
+  }
+}
