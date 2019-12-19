@@ -14,10 +14,69 @@ import SignUp from "../signUpFormSection/signUp";
 class LogIn extends React.Component {
     constructor(props) {
         super(props);
-        this.state = {}
+        this.state = {
+            email: "",
+            pass: "",
+
+            errors: {
+                errorEmail: "",
+                errorPass: "",
+
+            },
+            status: false
+        }
     }
 
+    handleGetInfo=(e)=>{
+        e.preventDefault();
+
+        this.setState({
+            [e.target.name]: e.currentTarget.value.trim()
+        });
+        console.log(this.state.email, "email", this.state.pass, "pass");
+    };
+
+    handleValidate = (e) => {
+        e.preventDefault();
+        const {pass, email , errors} = this.state;
+        console.log('pass: ', pass);
+        let errorObj = errors;
+        const validateEmail = RegExp(/^\S+@\S+\.\S+/g);
+        if (!email.length) {
+            errorObj.errorEmail = "Podany email jest nieprawidłowy!"
+        } else if (!validateEmail.test(email)) {
+            console.log("zle wpisane email");
+            errorObj.errorEmail = "Podany email jest nieprawidłowy!"
+        } else {
+            errorObj.errorEmail = ""
+        }
+        if (pass.length < 6) {
+            errorObj.errorPass = "Podane hasło jest za krótkie!"
+        } else {
+            errorObj.errorPass = ""
+        }
+        this.setState({
+            errors: errorObj,
+            pass: "",
+            email: ""
+
+        });
+
+        if (this.state.errors.errorPass === "" && this.state.errors.errorEmail === "" ) {
+            this.setState({
+                status: true
+            });
+
+
+        } else {
+            this.setState({
+                status: false
+            })
+        }
+    };
     render() {
+        let errorPass = this.state.errors.errorPass;
+        let errorEmail = this.state.errors.errorEmail;
         return (
             <>
                 <Container>
@@ -36,12 +95,14 @@ class LogIn extends React.Component {
                             <div className={"alignLoginForm"}>
 
                                 <label>Email</label>
-                                <input type="email"/>
+                                <input type="email" value={this.state.email} name={"email"}
+                                       onChange={this.handleGetInfo}/>
 
-
-                                <label id={"logInPassLabel"}>Hasło</label>
-                                <input type="password"/>
-
+                                <p className={"validateData"}> {errorEmail}</p>
+                                <label className={"logInPassLabel"}>Hasło</label>
+                                <input type="password" value={this.state.pass} name={"pass"}
+                                       onChange={this.handleGetInfo}/>
+                                <p className={"validateData"}> {errorPass}</p>
                             </div>
                         </Col>
                         <Col lg={4} md={4}></Col>
@@ -51,7 +112,7 @@ class LogIn extends React.Component {
                         <Col lg={6} md={6} xs={6}>
                             <div className={"inputFormBtn"}>
                                 <button className={"logInBtn"}><Link to="/rejestracja">Załóż konto</Link></button>
-                                <input type="submit" value={"Zaloguj się"} className={"logInBtn"}/>
+                                <input type="submit" value={"Zaloguj się"} className={"logInBtn"} onClick={this.handleValidate}/>
                             </div>
                         </Col>
                         <Col lg={3} md={3} xs={3}></Col>
