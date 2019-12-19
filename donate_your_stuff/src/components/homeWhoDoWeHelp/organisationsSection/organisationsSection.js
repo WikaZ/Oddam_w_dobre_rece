@@ -9,34 +9,34 @@ class OrganisationsSection extends React.Component {
         this.state = {
             elementsToRender: [
                 {
-                    header: "Organizacja 'Lorem Ipsum 1",
+                    header: "Organizacja “Lorem Ipsum” 1",
                     description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam animi aspernatur at, culpa nam nemo provident qui.",
                     donation: "Lorem ipsum dolor."
 
                 },
                 {
-                    header: "Organizacja 'Lorem Ipsum 2",
+                    header: "Organizacja “Lorem Ipsum” 2",
                     description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam animi aspernatur at, culpa nam nemo provident qui.",
                     donation: "Lorem ipsum dolor."
                 },
                 {
-                    header: "Organizacja 'Lorem Ipsum 3",
+                    header: "Organizacja “Lorem Ipsum” 3",
                     description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam animi aspernatur at, culpa nam nemo provident qui.",
                     donation: "Lorem ipsum dolor."
                 },
                 {
-                    header: "Organizacja 'Lorem Ipsum 4",
+                    header: "Organizacja “Lorem Ipsum” 4",
                     description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam animi aspernatur at, culpa nam nemo provident qui.",
                     donation: "Lorem ipsum dolor."
 
                 },
                 {
-                    header: "Organizacja 'Lorem Ipsum 5",
+                    header: "Organizacja “Lorem Ipsum” 5",
                     description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam animi aspernatur at, culpa nam nemo provident qui.",
                     donation: "Lorem ipsum dolor."
                 },
                 {
-                    header: "Organizacja 'Lorem Ipsum 6",
+                    header: "Organizacja “Lorem Ipsum” 6",
                     description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam animi aspernatur at, culpa nam nemo provident qui.",
                     donation: "Lorem ipsum dolor."
                 }

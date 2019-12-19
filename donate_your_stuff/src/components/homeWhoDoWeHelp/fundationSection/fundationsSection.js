@@ -9,50 +9,50 @@ class FundationsSection extends React.Component {
         this.state = {
             elementsToRender: [
                 {
-                    header: "Fundacja 'Dbam o Zdrowie'",
+                    header: "Fundacja “Dbam o Zdrowie”",
                     description: "Cel i misja: Pomoc osobom znajdującym się w trudnej sytuacji zyciowej.",
                     donation: "ubrania, jedzenie, sprzęt AGD, meble, zabawki"
 
                 },
                 {
-                    header: "Fundacja 'Dla Dzieci'",
+                    header: "Fundacja “Dla Dzieci”",
                     description: "Cel i misja: Pomoc dzieciom z ubogich rodzin.",
                     donation: "ubrania, meble, zabawki"
                 },
                 {
-                    header: "Fundacja 'Bez Domu'",
+                    header: "Fundacja “Bez Domu”",
                     description: "Cel i misja: Pomoc dla osób nie posiadających miejsca zamieszkania.",
                     donation: "ubrania, jedzenie, ciepłe koce"
                 },
                 {
-                    header: "Fundacja 'Dbam o Zdrowie2'",
+                    header: "Fundacja “Dbam o Zdrowie2”",
                     description: "Cel i misja: Pomoc osobom znajdującym się w trudnej sytuacji zyciowej.",
                     donation: "ubrania, jedzenie, sprzęt AGD, meble, zabawki"
 
                 },
                 {
-                    header: "Fundacja 'Dla Dzieci2'",
+                    header: "Fundacja “Dla Dzieci2”",
                     description: "Cel i misja: Pomoc dzieciom z ubogich rodzin.",
                     donation: "ubrania, meble, zabawki"
                 },
                 {
-                    header: "Fundacja 'Bez Domu2'",
+                    header: "Fundacja “Bez Domu2”",
                     description: "Cel i misja: Pomoc dla osób nie posiadających miejsca zamieszkania.",
                     donation: "ubrania, jedzenie, ciepłe koce"
                 },
                 {
-                    header: "Fundacja 'Dbam o Zdrowie3'",
+                    header: "Fundacja “Dbam o Zdrowie3”",
                     description: "Cel i misja: Pomoc osobom znajdującym się w trudnej sytuacji zyciowej.",
                     donation: "ubrania, jedzenie, sprzęt AGD, meble, zabawki"
 
                 },
                 {
-                    header: "Fundacja 'Dla Dzieci3'",
+                    header: "Fundacja “Dla Dzieci3”",
                     description: "Cel i misja: Pomoc dzieciom z ubogich rodzin.",
                     donation: "ubrania, meble, zabawki"
                 },
                 {
-                    header: "Fundacja 'Bez Domu3'",
+                    header: "Fundacja “Bez Domu3”",
                     description: "Cel i misja: Pomoc dla osób nie posiadających miejsca zamieszkania.",
                     donation: "ubrania, jedzenie, ciepłe koce"
                 }
