@@ -57,14 +57,16 @@ class LogIn extends React.Component {
         }
         this.setState({
             errors: errorObj,
-            pass: "",
-            email: ""
+            // pass: "",
+            // email: ""
 
         });
 
         if (this.state.errors.errorPass === "" && this.state.errors.errorEmail === "" ) {
             this.setState({
-                status: true
+                status: true,
+                pass: "",
+                email: ""
             });
 
 

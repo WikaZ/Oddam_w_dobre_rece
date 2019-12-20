@@ -61,15 +61,18 @@ class SignUp extends React.Component {
 
         this.setState({
             errors: errorObj,
-            pass: "",
-            email: "",
-            repeatPass:""
+            // pass: "",
+            // email: "",
+            // repeatPass:""
 
         });
 
         if (this.state.errors.errorPass === "" && this.state.errors.errorEmail === "" && this.state.errors.errorRepeatPass === "") {
             this.setState({
-                status: true
+                status: true,
+                pass: "",
+                email: "",
+                repeatPass:""
             });
 
 

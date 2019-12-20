@@ -28,20 +28,20 @@ class HomeContactForm extends React.Component {
         });
         console.log(this.state.name, "name", this.state.email, "email");
     };
-   postData=()=>{
+    postData = () => {
 
-
-        let name = this.state.name
-        let email = this.state.email;
-        let message=this.state.message;
+        let {name, email, message} = this.state;
+        // let name = this.state.name;
+        // let email = this.state.email;
+        // let message=this.state.message;
 
         fetch('https://fer-api.coderslab.pl/v1/portfolio/contact', {
             method: 'POST',
-            headers : {"Content-Type": "application/json"},
-            body:JSON.stringify({name:name, email:email,message:message})
+            headers: {"Content-Type": "application/json"},
+            body: JSON.stringify({name: name, email: email, message: message})
         }).then((res) => res.json())
-            .then((data) =>  console.log(data, "moje dane"))
-            .catch((err)=>console.log(err))
+            .then((data) => console.log(data, "moje dane"))
+            .catch((err) => console.log(err))
     };
 
 
@@ -83,14 +83,17 @@ class HomeContactForm extends React.Component {
 
         this.setState({
             errors: errorObj,
-            name: "",
-            email: "",
-            message: ""
+            // name: "",
+            // email: "",
+            // message: ""
 
         });
         if (this.state.errors.errorMessage === "" && this.state.errors.errorEmail === "" && this.state.errors.errorName === "") {
             this.setState({
-                status: true
+                status: true,
+                name: "",
+                email: "",
+                message: ""
             });
             this.postData();
 
@@ -99,9 +102,7 @@ class HomeContactForm extends React.Component {
                 status: false
             })
         }
-       };
-
-
+    };
 
 
     render() {
