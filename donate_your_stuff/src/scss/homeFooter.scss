@@ -30,11 +30,12 @@
 
   input[type="text"], input[type="email"] {
     margin-top: 10px;
-    padding: 10px 0;
+    padding: 10px 4px;
     font-size: 18px;
 
     &::placeholder {
       color: #d1d1d1;
+
     }
 
   }
@@ -98,15 +99,16 @@
       resize: none;
       border-color: transparent;
       border-bottom-color: #929292;
-      padding: 10px 0;
+      padding: 10px 4px;
       //margin: 21px 0 40px 0;
       background-color: transparent;
-      text-indent: -5px;
+      text-indent: 0;
       overflow-y: hidden;
 
       &::placeholder {
         color: #d1d1d1;
-        padding: 10px 0;
+        padding: 10px 4px;
+        text-indent: -5px;
       }
     }
 
