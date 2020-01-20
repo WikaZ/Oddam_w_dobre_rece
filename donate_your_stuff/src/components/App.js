@@ -11,9 +11,7 @@ import {
 import LogIn from "./logInFormSection/logIn";
 import SignUp from "./signUpFormSection/signUp";
 import LogOutSection from "./logOutSection/logOutSection"
-import FundationsSection from "./homeWhoDoWeHelp/fundationSection/fundationsSection";
-import OrganisationsSection from "./homeWhoDoWeHelp/organisationsSection/organisationsSection";
-import LocalDonationCenterSection from "./homeWhoDoWeHelp/localDonationCenterSection/localDonationCenterSection";
+
 
 import Navigation from "./navigation/navigation"
 

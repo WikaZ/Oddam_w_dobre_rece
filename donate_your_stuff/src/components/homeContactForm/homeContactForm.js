@@ -31,9 +31,6 @@ class HomeContactForm extends React.Component {
     postData = () => {
 
         let {name, email, message} = this.state;
-        // let name = this.state.name;
-        // let email = this.state.email;
-        // let message=this.state.message;
 
         fetch('https://fer-api.coderslab.pl/v1/portfolio/contact', {
             method: 'POST',
@@ -78,16 +75,11 @@ class HomeContactForm extends React.Component {
             errorObj.errorMessage = ""
         }
 
-        // this.checkErrors(errorObj);
-
 
         this.setState({
             errors: errorObj,
-            // name: "",
-            // email: "",
-            // message: ""
-
         });
+
         if (this.state.errors.errorMessage === "" && this.state.errors.errorEmail === "" && this.state.errors.errorName === "") {
             this.setState({
                 status: true,

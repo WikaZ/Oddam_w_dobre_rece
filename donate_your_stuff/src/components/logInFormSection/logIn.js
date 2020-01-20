@@ -10,6 +10,7 @@ import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import SignUp from "../signUpFormSection/signUp";
+import {db} from "../../db/dbHelper";
 
 class LogIn extends React.Component {
     constructor(props) {
@@ -27,7 +28,18 @@ class LogIn extends React.Component {
         }
     }
 
-    handleGetInfo=(e)=>{
+    handlePassMyData = () => {
+        db.collection("users").doc().set({
+            email: this.state.email,
+            pass: this.state.pass
+        }).then(function () {
+            console.log("Document successfully written!");
+        })
+            .catch(function (error) {
+                console.error("Error writing document: ", error);
+            });
+    };
+    handleGetInfo = (e) => {
         e.preventDefault();
 
         this.setState({
@@ -38,7 +50,7 @@ class LogIn extends React.Component {
 
     handleValidate = (e) => {
         e.preventDefault();
-        const {pass, email , errors} = this.state;
+        const {pass, email, errors} = this.state;
         console.log('pass: ', pass);
         let errorObj = errors;
         const validateEmail = RegExp(/^\S+@\S+\.\S+/g);
@@ -62,11 +74,12 @@ class LogIn extends React.Component {
 
         });
 
-        if (this.state.errors.errorPass === "" && this.state.errors.errorEmail === "" ) {
+        if (this.state.errors.errorPass === "" && this.state.errors.errorEmail === "") {
+            this.handlePassMyData();
             this.setState({
                 status: true,
                 pass: "",
-                email: ""
+                email:""
             });
 
 
@@ -76,6 +89,7 @@ class LogIn extends React.Component {
             })
         }
     };
+
     render() {
         let errorPass = this.state.errors.errorPass;
         let errorEmail = this.state.errors.errorEmail;
@@ -114,7 +128,8 @@ class LogIn extends React.Component {
                         <Col lg={6} md={6} xs={6}>
                             <div className={"inputFormBtn"}>
                                 <button className={"logInBtn"}><Link to="/rejestracja">Załóż konto</Link></button>
-                                <input type="submit" value={"Zaloguj się"} className={"logInBtn"} onClick={this.handleValidate}/>
+                                <input type="submit" value={"Zaloguj się"} className={"logInBtn"}
+                                       onClick={this.handleValidate}/>
                             </div>
                         </Col>
                         <Col lg={3} md={3} xs={3}></Col>
